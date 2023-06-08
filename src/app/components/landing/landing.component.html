@@ -1,0 +1,324 @@
+<!-- <h1 *ngIf="user$ | async as user">
+  Online kurs platformasına xoş gəlmisiniz, {{ user.email }}!
+  </h1> -->
+<!-- 
+<div class="callToAction">
+  <img src="../../../assets/701 purple 2.png" alt="701" id="cta701" />
+  <button  *ngIf="!(user$ | async)" routerLink="sign-up" type="button" id="signUp">Qeydiyyat</button>
+  <button  *ngIf="!(user$ | async)" routerLink="login" type="button" id="logIn">Giriş</button>
+  <button *ngIf="user$ | async as user"  routerLink="home" type="button" id="signUp">Şəxsi kabinet</button> -->
+
+
+  <div class="firstBlock">
+    <img src="../../../assets/701 purple 2.png" alt="701" class="firstBlock__logo" />
+    <button *ngIf="!(user$ | async)" routerLink="login" type="button" class="firstBlock__button firstBlock__button__login">Giriş</button>
+    <button *ngIf="!(user$ | async)" routerLink="sign-up" type="button" class="firstBlock__button firstBlock__button__signup">Qeydiyyat</button>
+    <button *ngIf="user$ | async as user"  routerLink="home" type="button" class="firstBlock__button firstBlock__button__signup">Şəxsi kabinet</button>
+    <button type="button" class="firstBlock__button firstBlock__button__freetrial">Start Free Trial</button>
+    <p class="firstBlock__text_slogan">Sıxıcı dərslərlə sağollaş</p>
+    <p class="firstBlock__text_lorem">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel sint
+      blanditiis libero in! Doloribus quibusdam quisquam quae quasi inventore.
+    </p>
+    <img src="../../../assets/girl_landing_page.png" alt="firstBlock__image" class="firstBlock__image">
+  </div>
+  
+  <div class="secondBlock">
+      <button type="button" class="secondBlock__button secondBlock__button_buraxilish" (click)="clickBuraxilish()" [style.background]="buttonGroup1">
+      Buraxılış
+      </button>
+      <button type="button" class="secondBlock__button secondBlock__button_firstGroup" (click)="clickFirstGroup()" [style.background]="buttonGroup2">
+      1-ci qrup
+      </button>
+      <button type="button" class="secondBlock__button secondBlock__button_secondGroup" (click)="clickSecondGroup()" [style.background]="buttonGroup3">
+      2-ci qrup
+      </button>
+      <button type="button" class="secondBlock__button secondBlock__button_thirdGroup" (click)="clickThirdGroup()" [style.background]="buttonGroup4">
+      3-cü qrup
+      </button>
+      <button type="button" class="secondBlock__button secondBlock__button_fourthGroup" (click)="clickFourthGroup()" [style.background]="buttonGroup5">
+      4-cü qrup
+      </button>
+  
+    <div class="secondBlock__buraxilish" *ngIf="buraxilish">
+      
+      <div class="secondBlock__lesson secondBlock__lesson_lesson1">
+        <img src="../../../assets/math.jpg" alt="701" class="secondBlock__lesson_lessonImg" />
+        <p class="secondBlock__lesson_lessonName">Riyaziyyat</p>
+        <p class="secondBlock__lesson_video">120 video</p>
+        <p class="secondBlock__lesson_teacher">Rüfət Quliyev</p>
+      </div>
+  
+      <div class="secondBlock__lesson secondBlock__lesson_lesson2">
+        <img src="../../../assets/math.jpg" alt="701" class="secondBlock__lesson_lessonImg" />
+        <p class="secondBlock__lesson_lessonName">Ana dili</p>
+        <p class="secondBlock__lesson_video">120 video</p>
+        <p class="secondBlock__lesson_teacher">Rüfət Quliyev</p>
+      </div>
+  
+      <div class="secondBlock__lesson secondBlock__lesson_lesson3">
+        <img src="../../../assets/math.jpg" alt="701" class="secondBlock__lesson_lessonImg" />
+        <p class="secondBlock__lesson_lessonName">Ingilis dili</p>
+        <p class="secondBlock__lesson_video">120 video</p>
+        <p class="secondBlock__lesson_teacher">Rüfət Quliyev</p>
+      </div>
+    </div>
+  
+    <div class="secondBlock__firstGroup" *ngIf="firstGroup">
+      <div class="secondBlock__lesson secondBlock__lesson_lesson1">
+        <img src="../../../assets/math.jpg" alt="701" class="secondBlock__lesson_lessonImg" />
+        <p class="secondBlock__lesson_lessonName">Riyaziyyat</p>
+        <p class="secondBlock__lesson_video">120 video</p>
+        <p class="secondBlock__lesson_teacher">Rüfət Quliyev</p>
+      </div>
+  
+      <div class="secondBlock__lesson secondBlock__lesson_lesson2">
+        <img src="../../../assets/math.jpg" alt="701" class="secondBlock__lesson_lessonImg" />
+        <p class="secondBlock__lesson_lessonName">Fizika</p>
+        <p class="secondBlock__lesson_video">120 video</p>
+        <p class="secondBlock__lesson_teacher">Rüfət Quliyev</p>
+      </div>
+  
+      <div class="secondBlock__lesson secondBlock__lesson_lesson3">
+        <img src="../../../assets/math.jpg" alt="701" class="secondBlock__lesson_lessonImg" />
+        <p class="secondBlock__lesson_lessonName">Informatika</p>
+        <p class="secondBlock__lesson_video">120 video</p>
+        <p class="secondBlock__lesson_teacher">Rüfət Quliyev</p>
+      </div>
+  
+    </div>
+  
+    <div class="secondBlock__secondGroup" *ngIf="secondGroup">
+      <div class="secondBlock__lesson secondBlock__lesson_lesson1">
+        <img src="../../../assets/math.jpg" alt="701" class="secondBlock__lesson_lessonImg" />
+        <p class="secondBlock__lesson_lessonName">Riyaziyyat</p>
+        <p class="secondBlock__lesson_video">120 video</p>
+        <p class="secondBlock__lesson_teacher">Rüfət Quliyev</p>
+      </div>
+  
+      <div class="secondBlock__lesson secondBlock__lesson_lesson2">
+        <img src="../../../assets/math.jpg" alt="701" class="secondBlock__lesson_lessonImg" />
+        <p class="secondBlock__lesson_lessonName">Cografiya</p>
+        <p class="secondBlock__lesson_video">120 video</p>
+        <p class="secondBlock__lesson_teacher">Rüfət Quliyev</p>
+      </div>
+  
+      <div class="secondBlock__lesson secondBlock__lesson_lesson3">
+        <img src="../../../assets/math.jpg" alt="701" class="secondBlock__lesson_lessonImg" />
+        <p class="secondBlock__lesson_lessonName">Tarix</p>
+        <p class="secondBlock__lesson_video">120 video</p>
+        <p class="secondBlock__lesson_teacher">Rüfət Quliyev</p>
+      </div>
+  
+  </div>
+  
+    <div class="secondBlock__buraxilish" *ngIf="thirdGroup">
+      <div class="secondBlock__lesson secondBlock__lesson_lesson1">
+        <img src="../../../assets/math.jpg" alt="701" class="secondBlock__lesson_lessonImg" />
+        <p class="secondBlock__lesson_lessonName">Ana dili</p>
+        <p class="secondBlock__lesson_video">120 video</p>
+        <p class="secondBlock__lesson_teacher">Rüfət Quliyev</p>
+      </div>
+  
+      <div class="secondBlock__lesson secondBlock__lesson_lesson2">
+        <img src="../../../assets/math.jpg" alt="701" class="secondBlock__lesson_lessonImg" />
+        <p class="secondBlock__lesson_lessonName">Tarix</p>
+        <p class="secondBlock__lesson_video">120 video</p>
+        <p class="secondBlock__lesson_teacher">Rüfət Quliyev</p>
+      </div>
+  
+      <div class="secondBlock__lesson secondBlock__lesson_lesson3">
+        <img src="../../../assets/math.jpg" alt="701" class="secondBlock__lesson_lessonImg" />
+        <p class="secondBlock__lesson_lessonName">Ədəbiyyat</p>
+        <p class="secondBlock__lesson_video">120 video</p>
+        <p class="secondBlock__lesson_teacher">Rüfət Quliyev</p>
+      </div>
+  
+    </div>
+  
+    <div class="secondBlock__buraxilish" *ngIf="fourthGroup">
+      <div class="secondBlock__lesson secondBlock__lesson_lesson1">
+        <img src="../../../assets/math.jpg" alt="701" class="secondBlock__lesson_lessonImg" />
+        <p class="secondBlock__lesson_lessonName">Biologiya</p>
+        <p class="secondBlock__lesson_video">120 video</p>
+        <p class="secondBlock__lesson_teacher">Rüfət Quliyev</p>
+      </div>
+  
+      <div class="secondBlock__lesson secondBlock__lesson_lesson2">
+        <img src="../../../assets/math.jpg" alt="701" class="secondBlock__lesson_lessonImg" />
+        <p class="secondBlock__lesson_lessonName">Fizika</p>
+        <p class="secondBlock__lesson_video">120 video</p>
+        <p class="secondBlock__lesson_teacher">Rüfət Quliyev</p>
+      </div>
+  
+      <div class="secondBlock__lesson secondBlock__lesson_lesson3">
+        <img src="../../../assets/math.jpg" alt="701" class="secondBlock__lesson_lessonImg" />
+        <p class="secondBlock__lesson_lessonName">Kimya</p>
+        <p class="secondBlock__lesson_video">120 video</p>
+        <p class="secondBlock__lesson_teacher">Rüfət Quliyev</p>
+      </div>
+  
+  </div>
+  
+  </div>
+  
+  
+  
+  <div class="thirdBlock">
+    <div class="thirdBlock_titles">
+      <p class="thirdBlock__title">Niyə 701?</p>
+      <p class="thirdBlock__subtitle">701 sizə bir çox yeniliklər təklif edir</p>
+    </div>
+  
+    <div class="thirdBlock__blocks">
+      <div class="thirdBlock__block thirdBlock__block1">
+        <p class="thirdBlock__block_title">Peşəkar müəllimlər</p>
+        <p class="thirdBlock__block_subtitle">Peşəkar və dərsləri maraqlı şəkildə çatdıran repetitorlar 
+          701-in önəmli hissələrindən biridir.</p>
+      </div>
+  
+      <div class="thirdBlock__block thirdBlock__block2">     
+        <p class="thirdBlock__block_title">Yaradıcı və əyləncəli dərslər</p>
+        <p class="thirdBlock__block_subtitle">Dərsləri daha yaxşı anlamanız üçün mövzular hekayələrl
+           və animasiyalarla hazırlanmışdır.</p>
+      </div>
+  
+      <div class="thirdBlock__block thirdBlock__block3">
+        <p class="thirdBlock__block_title">Süni Zəka inteqrasiyası</p>
+        <p class="thirdBlock__block_subtitle">Suallarınıza həm Süni Zəka, həm müəllimlər
+          tərəfindən cavab ala bilərsiniz.</p>
+      </div>
+  
+    </div>
+  </div>
+  
+      
+  
+    <div class="fourthBlock">
+      <p class="fourthBlock__title">Qiymətlər</p>
+    
+      <div class="fourthBlock__buttons">
+        <button class="fourthBlock__button fourthBlock__button1" (click)="onClick()" [style.background]="buttonColor1">İllik</button>
+        <button class="fourthBlock__button fourthBlock__button2" (click)="onClick2()" [style.background]="buttonColor2" >Aylıq</button>
+      </div> 
+  
+      <div class="fourthBlock__prices" *ngIf="illik">
+  
+            <div class="fourthBlock__block fourthBlock__block1" >
+                <p class="fourthBlock__block_price">20 AZN</p>
+                <p class="fourthBlock__block_paket">1 fənn</p>
+                <button routerLink="payment" class="fourthBlock__block_button">Indi al!</button>
+            </div>
+        
+            <div class="fourthBlock__block fourthBlock__block2">
+                <p class="fourthBlock__block_price">55 AZN</p>
+                <p class="fourthBlock__block_savings">-13%</p>
+                <p class="fourthBlock__block_paket">Buraxılış paketi</p>
+                <li>Ana dili</li>
+                <li>Riyaziyyat</li>
+                <li>Ingilis dili</li>
+                <button routerLink="payment" class="fourthBlock__block_button">Indi al!</button>
+            </div>
+        
+            <div class="fourthBlock__block fourthBlock__block3">
+                <p class="fourthBlock__block_price">85 AZN</p>
+                <p class="fourthBlock__block_savings">-20%</p>
+                <p class="fourthBlock__block_paket">Qəbul paketi</p>
+                <li>Ana dili</li>
+                <li>Riyaziyyat</li>
+                <li>Ingilis dili</li>
+                <li>Fizika</li>
+                <li>Kimya</li>
+                <button routerLink="payment" class="fourthBlock__block_button">Indi al!</button>
+            </div>
+        
+            <div class="fourthBlock__block fourthBlock__block4">
+                <p class="fourthBlock__block_price">100 AZN</p>
+                <p class="fourthBlock__block_savings">-20%</p>
+                <p class="fourthBlock__block_paket">Full paket</p>
+                <button routerLink="payment" class="fourthBlock__block_button">Indi al!</button>
+            </div>
+        
+        </div>
+  
+      <div class="fourthBlock__prices" *ngIf="ayliq">
+  
+        <div class="fourthBlock__block fourthBlock__block1">
+            <p class="fourthBlock__block_price">30 AZN</p>
+            <p class="fourthBlock__block_paket">1 fənn</p>
+            <button routerLink="payment" class="fourthBlock__block_button">Indi al!</button>
+        </div>
+  
+        <div class="fourthBlock__block fourthBlock__block2">
+            <p class="fourthBlock__block_price">65 AZN</p>
+            <p class="fourthBlock__block_savings">-13%</p>
+            <p class="fourthBlock__block_paket">Buraxılış paketi</p>
+            <li>Ana dili</li>
+            <li>Riyaziyyat</li>
+            <li>Ingilis dili</li>
+            <button routerLink="payment" class="fourthBlock__block_button">Indi al!</button>
+        </div>
+  
+        <div class="fourthBlock__block fourthBlock__block3">
+            <p class="fourthBlock__block_price">90 AZN</p>
+            <p class="fourthBlock__block_savings">-20%</p>
+            <p class="fourthBlock__block_paket">Qəbul paketi</p>
+            <li>Ana dili</li>
+            <li>Riyaziyyat</li>
+            <li>Ingilis dili</li>
+            <li>Fizika</li>
+            <li>Kimya</li>
+            <button routerLink="payment" class="fourthBlock__block_button">Indi al!</button>
+        </div>
+  
+        <div class="fourthBlock__block fourthBlock__block4">
+            <p class="fourthBlock__block_price">110 AZN</p>
+            <p class="fourthBlock__block_savings">-20%</p>
+            <p class="fourthBlock__block_paket">Full paket</p>
+            <button routerLink="payment" class="fourthBlock__block_button">Indi al!</button>
+        </div>
+    </div>
+  </div>
+  
+  <div class="FAQBlock">
+    <p class="FAQBlock__title">Suallar və Cavablar</p>
+    <div class="FAQBlock__mainBlock">
+      <div class="mainBlock__subBlock subBlock1">
+        <p class="question" (click)="clickAnswer1()" >"701" nədir və tələbələrin imtahana hazırlaşmasına necə kömək edir?</p>
+          <p class="answer" *ngIf="answer1">701, abituriyentlərə tez, rahat və aşağı büdcəli öz yollarını seçməyə 
+            və qəbul üçün hazırlaşmağa imkan verən bir platformadır</p>
+        <hr>
+      </div>
+  
+      <div class="mainBlock__subBlock subBlock2">
+        <p class="question" (click)="clickAnswer2()" >"701" hansı imtahanları əhatə edir və hansı fənlər mövcuddur?</p>
+          <p class="answer" *ngIf="answer2">701-də buraxılış imtahanında və hər hansı bir qrup üçün qəbul 
+            imtahanında tələb olunan bütün fənlər mövcuddur</p>
+            <hr>
+      </div>
+  
+      <div class="mainBlock__subBlock subBlock3">
+        <p class="question" (click)="clickAnswer3()" >"701" ödənişlərini necə edə bilərəm və təhlükəsizdirmi?</p>
+          <p class="answer" *ngIf="answer3">Hal hazırda ödəniş M10 vasitəsilə həyata keçirilir. Yaxın gələcəkdə daha etibarlı və rahat ödəniş üsullarının əlavə edilməsi planlaşdırılır.
+            Amma indi də bütün ödənişləriniz tamamilə təhlükəsizdir</p>
+          <hr>
+      </div>
+  
+      <div class="mainBlock__subBlock subBlock4">
+        <p class="question" (click)="clickAnswer4()" >Bir neçə fənn alana endirim varmı?</p>
+          <p class="answer" *ngIf="answer4">Bəli, "Buraxılış paketi", "Qəbul paketi" və ya "Full paket" paketləri alanlara 13-20 faiz endirim nəzərdə tutulur.
+            Qiymətlərlə bağlı daha ətraflı məlumatı buradan əldə edə bilərsiniz</p>
+          <hr>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+      <img src="../../assets/701 purple 2.png" alt="701" class="footer__img">
+      <p class="footer__slogan">Biz interaktiv dərslərlə abituriyent həyatını asanlaşdıran <br> və onları gələcək üçün hazırlayan startup-ıq.</p>
+  
+      <p class="footer__contact">Bizimlə əlaqə saxlayın</p>
+      <p class="footer__number">+994 ** *** ** **</p>
+  </div>
+  
+  

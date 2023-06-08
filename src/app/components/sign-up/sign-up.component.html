@@ -1,0 +1,107 @@
+<div class="signupBlock"> 
+    <img src="../../../assets/701 purple 2.png" alt="701" class="pad" routerLink="" >
+
+
+    <div class="form-container1">
+
+      <p class="title">Qeydiyyat</p>
+      <form [formGroup]="signUpForm" (ngSubmit)="submit()">
+
+      <div class="inputBlock">
+      <div class="input1">
+      <mat-form-field>
+      <label for="name" class="inputTitle">Ad</label>
+      <input placeholder="Ad" formControlName="name" class="nameInput input" id="name" />
+        <mat-error *ngIf="name?.errors?.['required']">
+          Adınızı daxil edin
+        </mat-error>
+      </mat-form-field>
+      </div>
+
+      <div class="input2">
+      <mat-form-field>
+      <label for="soyad" class="inputTitle">Soyad</label>
+      <input
+          placeholder="Soyad"
+          formControlName="surname"
+          class="soyadInput input"
+          id="soyad"
+        />
+        <mat-error *ngIf="surname?.errors?.['required']">
+          Soyadınızı daxil edin
+        </mat-error>
+      </mat-form-field>
+      </div>
+
+      <div class="input3">
+      <mat-form-field >
+      <label for="email" class="inputTitle">E-poçt</label>
+      <input placeholder="E-poçt" formControlName="email" class="emailInput input" id="email"/>
+        <mat-error *ngIf="email?.errors?.['required']">
+          E-poçt ünvanı tələb olunur
+        </mat-error>
+        <mat-error *ngIf="email?.errors?.['email']">
+          Etibarlı e-poçt ünvanı daxil edin
+        </mat-error>
+      </mat-form-field>
+      </div>
+
+
+      <div class="input4">
+      <mat-form-field>
+      <label for="phone" class="inputTitle">Mobil nömrə</label>
+      <input
+      placeholder="Mobil nömrə"
+      formControlName="phone"
+      class="phoneInput input"
+      id="phone"
+    />
+      <mat-error *ngIf="phone?.errors?.['required']">
+        Mobil nömrəsini daxil edin
+      </mat-error>
+    </mat-form-field>
+      </div>
+
+      
+      <div class="input5">
+      <mat-form-field>
+        <label for="password" class="inputTitle">Şifrə</label>
+      <input
+      type="password"
+      placeholder="Şifrə"
+      formControlName="password"
+      id="password"
+      class="passwordInput input"/>
+        <mat-error *ngIf="password?.errors?.['required']">
+          Şifrə tələb olunur
+        </mat-error>
+      </mat-form-field>
+     </div>
+
+
+      <div class="input6">
+      <mat-form-field>
+      <label for="confirmPassword" class="inputTitle">Şifrənin təkrarı</label>
+      <input
+      type="password"
+      placeholder="Şifrə doğrulaması"
+      formControlName="confirmPassword"
+      id="confirmPassword"
+      class="confirmInput input"/>
+        <mat-error *ngIf="confirmPassword?.errors?.['required']">
+          Şifrə doğrulaması tələb olunur
+        </mat-error>
+      </mat-form-field>
+      <mat-error *ngIf="signUpForm.errors?.['passwordsDontMatch']">
+        Parollar uyğun olmalıdır
+      </mat-error>
+      </div>
+
+    </div>  
+
+    <button type="submit" mat-raised-button class="form-container__button">Davam et</button>
+  
+  </form>
+    </div>
+
+</div>

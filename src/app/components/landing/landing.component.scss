@@ -1,0 +1,596 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto+Condensed:wght@300&family=Space+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.firstBlock {
+  height: 100;
+  width: 100%;
+  background: linear-gradient(
+      263.19deg,
+      rgba(36, 33, 69, 0.3) 44.67%,
+      rgba(218, 30, 116, 0.3) 91.01%
+    ),
+    linear-gradient(106.52deg, #242145 54.69%, #da1e74 100%);
+}
+
+.firstBlock__logo {
+  position: absolute;
+  width: 97px;
+  height: 100px;
+  margin: 35px 80px;
+  
+}
+
+.firstBlock__button {
+  position: absolute;
+  height: 50px;
+  width: 170px;
+
+  border-radius: 13px;
+  color: #ffffff;
+  font-family: "Inter";
+  font-size: 125%;
+  font-weight: 600;
+
+  cursor: pointer;
+
+}
+
+.firstBlock__button__login {
+  margin-top: 55px;
+  margin-left: 1000px;
+  background: transparent;
+  border: 3px solid #6058be;
+}
+
+.firstBlock__button__signup {
+  margin-top: 55px;
+  margin-left: 1200px;
+  background: #E4005C;
+  border: transparent;
+} 
+
+.firstBlock__button__login:hover {
+  border: 3px solid #e4005c;
+}
+
+.firstBlock__button__signup:hover {
+  background: #c00046;
+}
+
+.firstBlock__text_slogan {
+  position: absolute;
+  width: 700px;
+  height: 300px;
+  margin-top: 170px;
+  margin-left: 80px;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 120px;
+  color: #ffffff;
+}
+
+.firstBlock__text_lorem {
+  position: absolute;
+  width: 500px;
+  height: 200px;
+  margin-top: 450px;
+  margin-left: 80px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 36px;
+  color: #ffffff;
+}
+
+.firstBlock__button__freetrial {
+  margin-top: 600px;
+  margin-left: 75px;
+
+  background: #E4005C;
+  border: transparent;
+}
+
+
+.firstBlock__button__freetrial:hover {
+  background: #c00046;
+}
+
+.firstBlock__image {
+  height: 750px;
+  width: 750px;
+  margin-left: 650px;
+  margin-top: 40px;
+}
+// ----
+.group {
+  float: left;
+  height: auto;
+  width: 150px;
+  padding: 0.5% 1%;
+  margin-top: 2%;
+
+  background: transparent;
+  border: 3px solid #6058BE;
+  border-radius: 61px;
+
+  color: #130F25;
+  font-family: 'Inter';
+  font-size: 100%;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.group:hover, .group:active {
+  background-color: #E4005C;
+  border: 3px solid transparent;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.secondBlock__button {
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  margin-top: 50px;
+  border-radius: 13px;
+  border: 3px solid #6058be;
+
+  font-family: "Inter";
+  font-weight: bold;
+
+  cursor: pointer;
+  }
+
+  .secondBlock__button_buraxilish {
+    margin-left: 350px;
+  }
+
+  .secondBlock__button_firstGroup {
+    margin-left: 500px;
+  }
+
+  .secondBlock__button_secondGroup {
+    margin-left: 650px;
+  }
+
+  .secondBlock__button_thirdGroup {
+    margin-left: 800px;
+  }
+
+  .secondBlock__button_fourthGroup {
+    margin-left: 950px;
+  }
+
+
+.secondBlock__lesson {
+  position: absolute;
+  height: 200px;
+  width: 250px;
+  margin-top: 150px;
+  background: #FFFFFF;
+  box-shadow: 0px 12.9385px 64.6926px #CCCCCC;
+  border-radius: 16px;
+}
+
+
+
+.secondBlock__lesson_lessonImg {
+  width: 250px;
+  height: 130px;
+  border-radius: 10px;
+}
+
+.secondBlock__lesson_lessonName {
+  position: absolute;
+  height: 10px;
+  width: 100px;
+  margin-left: 10px;
+  margin-top: 3px;
+
+  color: #130F25;
+  font-family: 'Poppins';
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.secondBlock__lesson_video {
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 30px;
+
+  color: #969696;
+  font-family: 'Poppins';
+  font-size: 13px;
+}
+
+.secondBlock__lesson_teacher {
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 30px;
+
+  color: #969696;
+  font-family: 'Poppins';
+  font-size: 13px;
+}
+
+.secondBlock__lesson_lesson1 {
+  margin-left: 300px;
+}
+
+.secondBlock__lesson_lesson2 {
+  margin-left: 600px;
+}
+
+.secondBlock__lesson_lesson3 {
+  margin-left: 900px;
+}
+
+// ------
+
+.thirdBlock {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin-top: 520px;
+}
+
+.thirdBlock_titles {
+  display: inline-block;
+}
+
+.thirdBlock__title {
+  margin-left: 50px;
+  margin-top: 50px;
+
+  font-weight: bold;
+  color: black;
+  font-family: "Poppins";
+  font-size: 70px;
+}
+
+.thirdBlock__subtitle {
+  margin-left: 50px;
+  margin-top: 50px;
+
+  font-family: "Poppins";
+  color: #969696;
+  font-size: 20px;
+}
+
+.thirdBlock__blocks {
+  display: inline-block;
+  position: absolute;
+}
+
+.thirdBlock__block {
+  position: absolute;
+  height: 250px;
+  width: 270px;
+  background: linear-gradient(202.47deg, rgba(36, 33, 69, 0.2) 6.46%, rgba(207, 32, 112, 0.2) 89.33%),
+  linear-gradient(135.13deg, #CF2070 1.68%, #242145 100.12%);
+  box-shadow: 0px 12.9385px 64.6926px #CCCCCC;
+  border-radius: 16px;
+}
+
+.thirdBlock__block1 {
+  margin-left: 100px;
+}
+
+.thirdBlock__block2 {
+  margin-left: 400px;
+}
+
+.thirdBlock__block3 {
+  margin-left: 700px;
+}
+
+.thirdBlock__block_title {
+  margin-top: 70px;
+  margin-left: 10px;
+
+  color: #FFFFFF;
+  font-family: "Inter";
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.thirdBlock__block_subtitle {
+  margin-top: 10px;
+  margin-left: 10px;
+
+  color: #DDDDDD;
+  font-family: "Poppins";
+  font-size: 13px;
+}
+
+// -----
+
+.fourthBlock {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  margin-top: 900px;
+}
+
+.fourthBlock__title {
+  text-align: center;
+
+  color: black;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.fourthBlock__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}  
+
+.fourthBlock__button {
+  margin-top: 40px;
+  height: 50px;
+  width: 120px;
+
+
+
+  cursor: pointer;
+  font-family: 'Inter';
+  font-size: 30px;
+  color:#FFFFFF;
+  border-radius: 17px;
+  border: 3px solid transparent;
+  font-weight: 600;
+}
+
+
+// .fourthBlock__button1 {
+//   margin-left: 600px;
+// }
+
+// .fourthBlock__button2 {
+//   margin-left: 30px;
+// }
+
+.fourthBlock__block {
+  position: absolute;
+
+  width: 290px;
+  height: 200px;
+  padding-bottom: 400px;
+  margin-top: 30px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 12px 64px #CCCCCC;
+  border-radius: 16px;
+}
+
+.fourthBlock__block1 {
+  margin-left: 30px;
+}
+
+.fourthBlock__block2 {
+  margin-left: 380px;
+}
+
+.fourthBlock__block3 {
+  margin-left: 730px;
+}
+
+.fourthBlock__block4 {
+  margin-left: 1080px;
+}
+
+.fourthBlock__block_price {
+  margin-top: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Inter";
+  font-size: 30px;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  font-family: "Poppins";
+  margin: 20px;
+  font-size: 20px;
+}
+
+.fourthBlock__block_savings {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 1%;
+
+  width: 20%;
+  height: auto;
+  margin-left: 40%;
+  margin-top: 0.5%;
+
+  background: #E4005C;
+  border-radius: 100px;
+
+  color: white;
+  font-family: 'Inter';
+  font-weight: bold;
+  font-size: 90%;
+}
+
+.fourthBlock__block_paket {
+  font-family: "Poppins";
+  color: #ADADAD;
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+}
+
+.fourthBlock__block_button {
+  height: auto;
+  width: auto;
+  margin-left: 115px;
+  padding: 0.5% 1%;
+
+
+  background: transparent;
+  border: 3px solid #6058BE;
+  border-radius: 61px;
+
+  color: #130F25;
+  font-family: 'Inter';
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.FAQBlock {
+  width: 100%;
+  position: absolute;
+  margin-top: 1700px;
+  background-color: #EAEAEA;
+}
+
+.FAQBlock__title {
+  margin-top: 70px;
+  text-align: center;
+
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 40px;
+  color: black;
+}
+
+.FAQBlock__mainBlock {
+  // background-color: red;
+
+  height: 650px;
+  width: 1000px;
+  margin-top: 50px;
+  margin-left: 210px;
+}
+
+.mainBlock__subBlock {
+  position: absolute;
+  // background-color: blue;
+  width: 1000px;
+  height: 110px;
+}
+
+.subBlock2 {
+  margin-top: 160px;
+}
+
+.subBlock3 {
+  margin-top: 320px;
+}
+
+.subBlock4 {
+  margin-top: 480px;
+}
+
+.question {
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 25px;
+  color: black;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+// .FAQbutton {
+//   position: absolute;
+//   margin-left: 960px;
+//   display: inline-block;
+
+//   width: 40px;
+//   height: 40px;
+//   background-color: #c00046;
+//   border-radius: 100px;
+//   border: transparent;
+
+//   cursor: pointer;
+// }
+
+
+
+hr {
+  background-color:#706F6F;
+  height: 4px;
+  border: transparent;
+  margin-top: 13px;
+}
+
+.answer {
+  text-align: center;
+  margin-top: 10px;
+
+
+  font-family: "Poppins";
+  font-size: 17.5px;
+  font-weight: 400;
+}
+
+
+// -----
+.footer {
+  height: 30vh;
+  width: 100%;
+  position: absolute;
+  margin-top: 2500px;
+  background-color: #393E46;
+}
+
+.footer__img {
+  float: left;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.footer__slogan {
+  position: absolute;
+  float: left;
+  margin-left: 50px;
+  margin-top: 100px;
+  color: #F4F4F4;
+  font-family: "Poppins";
+  font-size: 15px;
+}
+
+.footer__contact {
+  float: right;
+  margin-right: 60px;
+  margin-top: 70px;
+  color: #FFFFFF;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.footer__number {
+  float: right;
+  margin-top: 150px;
+  margin-right: -130px;
+  color: #FFFFFF;
+  font-family: "Poppins";
+  font-size: 15px;
+}

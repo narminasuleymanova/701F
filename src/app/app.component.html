@@ -1,0 +1,17 @@
+<!-- <mat-toolbar color="primary">
+  <span routerLink="" >701</span>
+  <ng-container *ngIf="authenticationService.currentUser$ | async as user; else loginButton">
+    <button mat-button (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      Çıxış
+    </button>
+  </ng-container>
+  <ng-template #loginButton>
+    <button mat-button routerLink="login">
+      <mat-icon>login</mat-icon>
+      Daxil ol
+    </button>
+  </ng-template>
+</mat-toolbar> -->
+
+ <router-outlet></router-outlet>

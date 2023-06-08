@@ -1,0 +1,75 @@
+.example-container {
+    height: 85%;
+    background-color: white;
+  }
+  .example-sidenav-content {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+  }
+  .example-sidenav {
+     user-select: none;
+     width: 300px;
+  }
+  .full-width {
+    width: 100%;
+  }
+  .menu-button {
+    transition: 300ms ease-in-out;
+    transform: rotate(0deg);
+  }
+  .menu-button.rotated {
+    transform: rotate(180deg);
+  }
+  .submenu {
+    overflow-y: hidden;
+    transition: transform 300ms ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    padding-left: 30px;
+  }
+  .submenu.expanded {
+    transform: scaleY(1);
+  }
+
+  .pad {
+    margin-left: 30px;
+  }
+
+  img{
+    height: 70px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mat-list-item.active {
+    background-color: rgb(206, 198, 198);
+    border-radius: 10px;
+    padding: 5px 0px;
+  }
+  
+  
+  mat-list-item {
+    margin-bottom: 8px !important;
+  }
+
+  .btn-div{
+    display: flex;
+    gap: 20px;
+  }
+
+  span {
+    font-weight: 500;
+  }
+  
+  
+  
+  
