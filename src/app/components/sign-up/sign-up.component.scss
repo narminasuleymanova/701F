@@ -2,67 +2,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto+Condensed:wght@300&family=Space+Mono&display=swap");
 
-.signupBlock {
-    background: linear-gradient(314.59deg, rgba(218, 30, 116, 0.3) 25.19%, rgba(36, 33, 69, 0.3) 63.19%),
-     linear-gradient(167.07deg, #DA1E74 9.35%, #242145 90.58%);
+.block {
     height: 100%;
     width: 100%;
+    background: linear-gradient(314.59deg, rgba(218, 30, 116, 0.3) 25.19%, rgba(36, 33, 69, 0.3) 63.19%), 
+    linear-gradient(167.07deg, #DA1E74 9.35%, #242145 90.58%);
 }
 
-.pad {
+.pad{
+    padding: 10px;
     margin-left: 10px;
+}
+
+#cta701 {
+    height: 150px;
+    width: 150px;
     cursor: pointer;
 }
 
-
-
-.form-container1 {
-    background: rgba(255, 255, 255, 0.3);
+.form-container {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #000000;
     backdrop-filter: blur(48.5194px);
     border-radius: 90px;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 780px;
-    width: 600px;
+    border-radius: 90px;
+    height: 450px;
 }
 
 .title {
-    font-family: "Poppins";
     font-weight: bold;
-    font-size: 40px;
-    margin-top: 60px;
-    margin-left: 55px;
-}
-
-.input {
-    border-radius: 13px;
-    border: transparent;
-    height: 40px;
-    width: 300px;
-    margin-top: 3px;
-
     font-family: "Poppins";
+    font-size: 30px;
 }
 
-
-.inputTitle {
-    font-family: "Poppins";
-    font-size: 20px;
-}
-
-.inputBlock {
-    margin-left: 60px;
-}
-
-.form-container__button{
-    float: right;
-    margin-top: -60px;
-    margin-right: 60px;
-    background-color: #DA1E74;
-
+.button {
+    background-color: #E4005C;
     color: #fff;
 }
-

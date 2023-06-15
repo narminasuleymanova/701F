@@ -27,6 +27,22 @@ export class HomeComponent implements OnInit {
   showSubSubMenu8: boolean = false;
   showSubSubMenu9: boolean = false;
   showSubSubMenu10: boolean = false;
+  showSubSubMenu11: boolean = false;
+  showSubSubMenu12: boolean = false;
+  showSubSubMenu13: boolean = false;
+  showSubSubMenu14: boolean = false;
+  showSubSubMenu15: boolean = false;
+  showSubSubMenu16: boolean = false;
+  showSubSubMenu17: boolean = false;
+  showSubSubMenu18: boolean = false;
+  showSubSubMenu19: boolean = false;
+  showSubSubMenu20: boolean = false;
+  showSubSubMenu21: boolean = false;
+  showSubSubMenu22: boolean = false;
+  showSubSubMenu23: boolean = false;
+  showSubSubMenu24: boolean = false;
+  showSubSubMenu25: boolean = false;
+  showSubSubMenu26: boolean = false;
 
   colorMath: string = '#E4005C';
   colorAz: string = '#FFFFFF';
@@ -44,6 +60,22 @@ export class HomeComponent implements OnInit {
   koklerArr: string[] = ['Hesabi kvadrat kök və onun xassələri', 'N-ci dərəcədən kök', 'Həqiqiüstlü qüvvət və onun xassələri. Ədədlərin müqayisəsi', 'Kəsrlərin ixtisarı. İfadələrin sadələşdirilməsi və ədədi qiymətinin tapılması']
   birmechulluArr: string[] = ['Xətti tənliklər', 'Kvadrat tənliklər və onların həllinin araşdırılması', 'Viyet teoremi və onun tərsi olan teorem', 'Rasional tənliklər', 'Modul işarəsi daxilində dəyişəni olan tənliklər', 'İrrasional tənliklər', 'Tənlik qurmaqla məsələlər həlli']
   sistemArr: string[] = ['Xətti tənliklər sistemi', 'Xətti tənliklər sisteminin həllinin araşdırılması', 'Biri birdərəcəli, digəri iki və daha yüksək dərəcəli olan tənliklər sistemi', 'Hər iki tənliyi iki və daha yüksək dərəcəli olan tənliklər sistemi', 'Tənliklər sistemi ilə məsələlər həlli']
+  berabersizliklerArr: string[] = ['Ədədi bərabərsizliklər və onların əsas xassələri', 'Birdəyişənli xətti bərabərsizliklər', 'Birdəyişənli xətti bərabərsizliklər sistemi', 'İkidərəcəli və yüksək dərəcəli bərabərsizliklər', 'Rasional bərabərsizliklər', 'Modul işarəsi daxilində dəyişəni olan bərabərsizliklər', 'Kvadrat bərabərsizliklər sistemi', 'İrrasional bərabərsizliklər']
+  ardicilliqlarArr: string[] = ['Ədədi ardıcıllıqlar', 'Ədədi silsilələr', 'Həndəsi silsilələr. Sonsuz həndəsi silsilənin cəmi', 'Ədədi və həndəsi silsilələrə aid məsələlər']
+  coxluqlarArr: string[] = ['Çoxluqlar', 'Çoxluqların birləşməsi, kəsişməsi, fərqi', 'Çoxluqların birləşməsi, kəsişməsi və fərqinin elementlərinin sayı']
+  hendesArr: string[] = ['Düz xətt, şüa, parça. Parçaların ölçülməsi', 'Bucaq. Bucaqların ölçülməsi. Bucağın tənböləni', 'Qonşu və qarşılıqlı bucaqlar', 'İki paralel düz xəttin üçüncü ilə kəsişməsindən alınan bucaqlar', 'Uyğun tərəfləri paralel və perpendikulyar olan bucaqlar']
+  ucbucaqlarArr: string[] = ['Üçbucaq. Üçbucaq bərabərsizliyi', 'Üçbucağın perimetri', 'Üçbucağın medianı, tənböləni, hündürlüyü', 'Medianların və tənbölənlərin xassəsi', 'Üçbucağın daxili bucaqlarının cəmi. Üçbucağın xarici bucağının xassəsi', 'Üçbucaqların konqruyentlik əlaməti. Fales teoremi. Üçbucağın orta xətti', 'Bərabəryanlı üçbucaqlar', 'Bərabərtərəfli üçbucaqlar', 'Düzbucaqlı üçbucaq. Pifaqor teoremi', 'Düzbucaqlı üçbucağın tərəfləri və bucaqları arasındakı münasibətlər', 'Sinuslar teoremi', 'Kosinuslar teoremi']
+  dordbucaqlarArr: string[] =['Qabarıq çoxbucaqlı. Qabaqrıq çoxbucaqlının daxili və xarici bucaqlarının cəmi. Düzgün çoxbucaqlı', 'Paraleloqram, onun xassələri və əlamətləri', 'Düzbucaqlı, kvadrat, romb və onların xassələri', 'Trapesiya və onun orta xətti']
+  cevreArr: string[] = ['Çevrə. Dairə. Radius, diametr, vətər', 'Çevrənin və çevrə qövsünün uzunluğu', 'Çevrələrin qarşılıqlı vəziyyəti', 'Mərkəzi bucaq. Daxilə çəkilmiş bucaq. Toxunanla vətər arasındakı bucaq', 'Çevrədə mütənasib parçalar. Toxunan və kəsənin xassələri', 'Çevrənin daxilinə və xaricinə çəkilmiş üçbucaqlar', 'Çevrənin daxilinə və xaricinə çəkilmiş çoxbucaqlılar']
+  funksiyalarArr: string[] = ['y= kx+ b funksiyası, qrafiki və qrafik çevrilmələri', 'y= k/x funksiyası, qrafiki və qrafik çevrilmələri', 'y=x^2, y=x^n (n>2) funksiyaları, onların qrafikləri və qrafiklərinin çevrilmələri', 'y=IxI funksiyası, qrafiki və qrafik çevrilmələri', 'y=sqrtx funksiyası, qrafiki və qrafik çevrilmələri', 'Tək və cüt funksiyalar', 'Artan və azalan funksiyalar', 'Dövri funksiya','Mürəkkəb funksiyalar', 'Tərs funksiya', 'Bəzi funksiyaların təyin oblastı və qiymətlər çoxluğu', 'Funksiyaların qrafiklərinin qarşılıqlı vəziyyəti']
+  triqonometrikArr: string[] = ['Bucağın radian və dərəcə ölçüsü', 'İstənilən bucağın triqonometrik funksiyaları', 'Əsas triqonometrik eyniliklər', 'y= sinx funksiyası və xassələri', 'y= cosx funksiyası və xassələri', 'y= tgx funksiyası və xassələri', 'y=ctgx funksiyası və xassələri', 'Çevirmə düsturları', 'Triqonometrik funksiyaların ən böyük və ən kiçik qiymətləri', 'Tərs triqonometrik funksiyalar']
+  triqonometriktoplamaArr: string[] = ['İki bucağın cəmi və fərqinin triqonometrik funksiyaları', 'İkiqat və yarım arqumentin triqonometrik funksiyaları', 'Triqonometrik funksiyaların cəminin və fərqinin hasilə çevrilməsi', 'Hasili cəmə çevirmə düsturları']
+  triqonometriktenliklerArr: string[] = ['Sadə triqonometrik tənliklər', 'Triqonometrik tənliklərin müxtəlif üsullarla həlli', 'Triqonometrik tənliklər sistemi', 'Triqonometrik bərabərsizliklər']
+  loqarifmikArr: string[] = ['Üstlü funksiya və onun xassələri', 'Ədədin loqarifmi', 'Loqarifmin xassələri', 'Loqarifmik funksiya və onun xassələri']
+  loqarifmiktenliklerArr: string[] = ['Üstlü tənliklər', 'Loqarifmik tənliklər', 'Üstlü bərabərsizliklər', 'Loqarifmik bərabərsizliklər', 'Üstlü tənliklər sistemi', 'Loqarifmik tənliklər sistemi']
+  limitArr: string[] = ['Ardıcıllığın limiti', 'Funksiyanın limiti']
+  toremeArr: string[] = ['Funksiyaların törəməsi', 'Törəmənin həndəsi mənası', 'Toxunanın tənliyi', 'Funksiyanın böhran nöqtəsi', 'Funksiyanın artma azalma aralıqları, ekstremum nöqtələri, ən böyük və ən kiçik qiymətləri', 'Törəmənin tətbiqi ilə məsələ həlli']
+  statistikaArr: string[] = ['Birləşmələr nəzəriyyəsi', 'Ehtimal nəzəriyyəsi və statistika']
 
   fonetikaArr: string[] = ['Saitlər, növləri və tələffüzü', 'Samitlər, növləri və tələffüzü', 'Ahəng qanunu', 'Heca və vurğu', 'Sözün fonetik xüsusiyyətləri']
   leksikaArr: string[] = ['Sözün leksik və qrammatik mənası', 'Sözün həqiqi və məcazi mənası. Təkmənalı və çoxmənalı sözlər. Terminlər. Arxaizmlər', 'Omonimlər. Sinonimlər. Antonimlər', 'Frazeoloji birləşmələr']

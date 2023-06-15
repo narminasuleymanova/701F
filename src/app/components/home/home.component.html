@@ -262,6 +262,377 @@
       </div>
     </mat-nav-list>
 
+    <mat-nav-list>
+      <mat-list-item (click)="showSubSubMenu11 = !showSubSubMenu11" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing"
+          >Bərabərsizliklər və bərabərsizliklər sistemi </span
+        >
+        <mat-icon
+          class="menu-button"
+          [ngClass]="{ rotated: showSubSubMenu11 }"
+          *ngIf="isExpanded || isShowing"
+          >expand_more</mat-icon
+        >
+      </mat-list-item>
+      <div
+        class="submenu"
+        [ngClass]="{ expanded: showSubSubMenu11 }"
+        *ngIf="isShowing || isExpanded"
+      >
+        <ng-container *ngIf="showSubSubMenu11">
+          <mat-list-item routerLink="not-available"  *ngFor="let name of berabersizliklerArr ">{{name}}</mat-list-item>
+        </ng-container>
+      </div>
+    </mat-nav-list>
+
+    <mat-nav-list>
+      <mat-list-item (click)="showSubSubMenu12 = !showSubSubMenu12" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing"
+          >Ədədi ardıcıllıqlar. Silsilələr </span
+        >
+        <mat-icon
+          class="menu-button"
+          [ngClass]="{ rotated: showSubSubMenu12 }"
+          *ngIf="isExpanded || isShowing"
+          >expand_more</mat-icon
+        >
+      </mat-list-item>
+      <div
+        class="submenu"
+        [ngClass]="{ expanded: showSubSubMenu12 }"
+        *ngIf="isShowing || isExpanded"
+      >
+        <ng-container *ngIf="showSubSubMenu12">
+          <mat-list-item routerLink="not-available"  *ngFor="let name of ardicilliqlarArr ">{{name}}</mat-list-item>
+        </ng-container>
+      </div>
+    </mat-nav-list>
+
+    <mat-nav-list>
+      <mat-list-item (click)="showSubSubMenu13 = !showSubSubMenu13" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing"
+          >Çoxluqlar </span
+        >
+        <mat-icon
+          class="menu-button"
+          [ngClass]="{ rotated: showSubSubMenu13 }"
+          *ngIf="isExpanded || isShowing"
+          >expand_more</mat-icon
+        >
+      </mat-list-item>
+      <div
+        class="submenu"
+        [ngClass]="{ expanded: showSubSubMenu13 }"
+        *ngIf="isShowing || isExpanded"
+      >
+        <ng-container *ngIf="showSubSubMenu13">
+          <mat-list-item routerLink="not-available"  *ngFor="let name of coxluqlarArr ">{{name}}</mat-list-item>
+        </ng-container>
+      </div>
+    </mat-nav-list>
+
+    <mat-nav-list>
+      <mat-list-item (click)="showSubSubMenu14 = !showSubSubMenu14" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing"
+          >Həndəsənin əsas anlayışları</span
+        >
+        <mat-icon
+          class="menu-button"
+          [ngClass]="{ rotated: showSubSubMenu14 }"
+          *ngIf="isExpanded || isShowing"
+          >expand_more</mat-icon
+        >
+      </mat-list-item>
+      <div
+        class="submenu"
+        [ngClass]="{ expanded: showSubSubMenu14 }"
+        *ngIf="isShowing || isExpanded"
+      >
+        <ng-container *ngIf="showSubSubMenu14">
+          <mat-list-item routerLink="not-available"  *ngFor="let name of hendesArr ">{{name}}</mat-list-item>
+        </ng-container>
+      </div>
+    </mat-nav-list>
+
+    <mat-nav-list>
+      <mat-list-item (click)="showSubSubMenu15 = !showSubSubMenu15" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing"
+          >Üçbucaqlar</span
+        >
+        <mat-icon
+          class="menu-button"
+          [ngClass]="{ rotated: showSubSubMenu15 }"
+          *ngIf="isExpanded || isShowing"
+          >expand_more</mat-icon
+        >
+      </mat-list-item>
+      <div
+        class="submenu"
+        [ngClass]="{ expanded: showSubSubMenu15 }"
+        *ngIf="isShowing || isExpanded"
+      >
+        <ng-container *ngIf="showSubSubMenu15">
+          <mat-list-item routerLink="not-available"  *ngFor="let name of ucbucaqlarArr ">{{name}}</mat-list-item>
+        </ng-container>
+      </div>
+    </mat-nav-list>
+
+    <mat-nav-list>
+      <mat-list-item (click)="showSubSubMenu16 = !showSubSubMenu16" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing"
+          >Dördbucaqlılar. Çoxbucaqlılar</span
+        >
+        <mat-icon
+          class="menu-button"
+          [ngClass]="{ rotated: showSubSubMenu16 }"
+          *ngIf="isExpanded || isShowing"
+          >expand_more</mat-icon
+        >
+      </mat-list-item>
+      <div
+        class="submenu"
+        [ngClass]="{ expanded: showSubSubMenu16 }"
+        *ngIf="isShowing || isExpanded"
+      >
+        <ng-container *ngIf="showSubSubMenu16">
+          <mat-list-item routerLink="not-available"  *ngFor="let name of dordbucaqlarArr ">{{name}}</mat-list-item>
+        </ng-container>
+      </div>
+    </mat-nav-list>
+
+    <mat-nav-list>
+      <mat-list-item (click)="showSubSubMenu17 = !showSubSubMenu17" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing"
+          >Çevrə və Dairə</span
+        >
+        <mat-icon
+          class="menu-button"
+          [ngClass]="{ rotated: showSubSubMenu17 }"
+          *ngIf="isExpanded || isShowing"
+          >expand_more</mat-icon
+        >
+      </mat-list-item>
+      <div
+        class="submenu"
+        [ngClass]="{ expanded: showSubSubMenu17 }"
+        *ngIf="isShowing || isExpanded"
+      >
+        <ng-container *ngIf="showSubSubMenu17">
+          <mat-list-item routerLink="not-available"  *ngFor="let name of cevreArr ">{{name}}</mat-list-item>
+        </ng-container>
+      </div>
+    </mat-nav-list>
+
+    <mat-nav-list>
+      <mat-list-item (click)="showSubSubMenu18 = !showSubSubMenu18" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing"
+          >Funksiyalar və qrafiklər</span
+        >
+        <mat-icon
+          class="menu-button"
+          [ngClass]="{ rotated: showSubSubMenu18 }"
+          *ngIf="isExpanded || isShowing"
+          >expand_more</mat-icon
+        >
+      </mat-list-item>
+      <div
+        class="submenu"
+        [ngClass]="{ expanded: showSubSubMenu18 }"
+        *ngIf="isShowing || isExpanded"
+      >
+        <ng-container *ngIf="showSubSubMenu18">
+          <mat-list-item routerLink="not-available"  *ngFor="let name of funksiyalarArr ">{{name}}</mat-list-item>
+        </ng-container>
+      </div>
+    </mat-nav-list>
+
+    <mat-nav-list>
+      <mat-list-item (click)="showSubSubMenu19 = !showSubSubMenu19" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing"
+          >Triqonometrik funksiyalar</span
+        >
+        <mat-icon
+          class="menu-button"
+          [ngClass]="{ rotated: showSubSubMenu19 }"
+          *ngIf="isExpanded || isShowing"
+          >expand_more</mat-icon
+        >
+      </mat-list-item>
+      <div
+        class="submenu"
+        [ngClass]="{ expanded: showSubSubMenu19 }"
+        *ngIf="isShowing || isExpanded"
+      >
+        <ng-container *ngIf="showSubSubMenu19">
+          <mat-list-item routerLink="not-available"  *ngFor="let name of triqonometrikArr ">{{name}}</mat-list-item>
+        </ng-container>
+      </div>
+    </mat-nav-list>
+
+    <mat-nav-list>
+      <mat-list-item (click)="showSubSubMenu20 = !showSubSubMenu20" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing"
+          >Triqonometrik funksiyalar üçün toplama teoremi </span
+        >
+        <mat-icon
+          class="menu-button"
+          [ngClass]="{ rotated: showSubSubMenu20 }"
+          *ngIf="isExpanded || isShowing"
+          >expand_more</mat-icon
+        >
+      </mat-list-item>
+      <div
+        class="submenu"
+        [ngClass]="{ expanded: showSubSubMenu20}"
+        *ngIf="isShowing || isExpanded"
+      >
+        <ng-container *ngIf="showSubSubMenu20">
+          <mat-list-item routerLink="not-available"  *ngFor="let name of triqonometriktoplamaArr ">{{name}}</mat-list-item>
+        </ng-container>
+      </div>
+    </mat-nav-list>
+
+    <mat-nav-list>
+      <mat-list-item (click)="showSubSubMenu21 = !showSubSubMenu21" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing"
+          >Triqonometrik tənliklər və bərabərsizliklər </span
+        >
+        <mat-icon
+          class="menu-button"
+          [ngClass]="{ rotated: showSubSubMenu21 }"
+          *ngIf="isExpanded || isShowing"
+          >expand_more</mat-icon
+        >
+      </mat-list-item>
+      <div
+        class="submenu"
+        [ngClass]="{ expanded: showSubSubMenu21}"
+        *ngIf="isShowing || isExpanded"
+      >
+        <ng-container *ngIf="showSubSubMenu21">
+          <mat-list-item routerLink="not-available"  *ngFor="let name of triqonometriktenliklerArr ">{{name}}</mat-list-item>
+        </ng-container>
+      </div>
+    </mat-nav-list>
+
+    <mat-nav-list>
+      <mat-list-item (click)="showSubSubMenu22 = !showSubSubMenu22" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing"
+          >Üstlü və loqarifmik funksiyalar </span
+        >
+        <mat-icon
+          class="menu-button"
+          [ngClass]="{ rotated: showSubSubMenu22 }"
+          *ngIf="isExpanded || isShowing"
+          >expand_more</mat-icon
+        >
+      </mat-list-item>
+      <div
+        class="submenu"
+        [ngClass]="{ expanded: showSubSubMenu22}"
+        *ngIf="isShowing || isExpanded"
+      >
+        <ng-container *ngIf="showSubSubMenu22">
+          <mat-list-item routerLink="not-available"  *ngFor="let name of loqarifmikArr ">{{name}}</mat-list-item>
+        </ng-container>
+      </div>
+    </mat-nav-list>
+
+    <mat-nav-list>
+      <mat-list-item (click)="showSubSubMenu23 = !showSubSubMenu23" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing"
+          >Üstlü, loqarifmik tənliklər və bərabərsizliklər </span
+        >
+        <mat-icon
+          class="menu-button"
+          [ngClass]="{ rotated: showSubSubMenu23 }"
+          *ngIf="isExpanded || isShowing"
+          >expand_more</mat-icon
+        >
+      </mat-list-item>
+      <div
+        class="submenu"
+        [ngClass]="{ expanded: showSubSubMenu23}"
+        *ngIf="isShowing || isExpanded"
+      >
+        <ng-container *ngIf="showSubSubMenu23">
+          <mat-list-item routerLink="not-available"  *ngFor="let name of loqarifmiktenliklerArr ">{{name}}</mat-list-item>
+        </ng-container>
+      </div>
+    </mat-nav-list>
+
+    <mat-nav-list>
+      <mat-list-item (click)="showSubSubMenu24 = !showSubSubMenu24" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing"
+          >Ardıcıllığın və funksiyanın limiti  </span
+        >
+        <mat-icon
+          class="menu-button"
+          [ngClass]="{ rotated: showSubSubMenu24 }"
+          *ngIf="isExpanded || isShowing"
+          >expand_more</mat-icon
+        >
+      </mat-list-item>
+      <div
+        class="submenu"
+        [ngClass]="{ expanded: showSubSubMenu24}"
+        *ngIf="isShowing || isExpanded"
+      >
+        <ng-container *ngIf="showSubSubMenu24">
+          <mat-list-item routerLink="not-available"  *ngFor="let name of limitArr ">{{name}}</mat-list-item>
+        </ng-container>
+      </div>
+    </mat-nav-list>
+
+    <mat-nav-list>
+      <mat-list-item (click)="showSubSubMenu25 = !showSubSubMenu25" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing"
+          >Törəmə və tətbiqləri  </span
+        >
+        <mat-icon
+          class="menu-button"
+          [ngClass]="{ rotated: showSubSubMenu25 }"
+          *ngIf="isExpanded || isShowing"
+          >expand_more</mat-icon
+        >
+      </mat-list-item>
+      <div
+        class="submenu"
+        [ngClass]="{ expanded: showSubSubMenu25}"
+        *ngIf="isShowing || isExpanded"
+      >
+        <ng-container *ngIf="showSubSubMenu25">
+          <mat-list-item routerLink="not-available"  *ngFor="let name of toremeArr ">{{name}}</mat-list-item>
+        </ng-container>
+      </div>
+    </mat-nav-list>
+
+    <mat-nav-list>
+      <mat-list-item (click)="showSubSubMenu26 = !showSubSubMenu26" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing"
+          >Birləşmələr nəzəriyyəsi. Ehtimal nəzəriyyəsi və Statistika </span
+        >
+        <mat-icon
+          class="menu-button"
+          [ngClass]="{ rotated: showSubSubMenu26 }"
+          *ngIf="isExpanded || isShowing"
+          >expand_more</mat-icon
+        >
+      </mat-list-item>
+      <div
+        class="submenu"
+        [ngClass]="{ expanded: showSubSubMenu26}"
+        *ngIf="isShowing || isExpanded"
+      >
+        <ng-container *ngIf="showSubSubMenu26">
+          <mat-list-item routerLink="not-available"  *ngFor="let name of statistikaArr ">{{name}}</mat-list-item>
+        </ng-container>
+      </div>
+    </mat-nav-list>
+
+
+
+
 
   </mat-sidenav>
 
