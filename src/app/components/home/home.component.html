@@ -883,6 +883,311 @@
       </ng-container>
     </div>
   </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu11 = !showSubSubMenu11" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Köməkçi nitq hissələri</span
+      >
+      <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu11 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      >
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu11 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu11">
+        <mat-list-item routerLink="not-available" *ngFor="let name of komekciArr ">{{name}}</mat-list-item>
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu12 = !showSubSubMenu12" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Söz birləşmələri. Sintaktik əlaqələr</span
+      >
+      <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu12 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      >
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu12 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu12">
+        <mat-list-item routerLink="not-available" *ngFor="let name of sozbirleshmeArr ">{{name}}</mat-list-item>
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu13 = !showSubSubMenu13" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Cümlə. Sadə cümlənin təsnifatı</span
+      >
+      <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu13 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      >
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu13 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu13">
+        <mat-list-item routerLink="not-available" *ngFor="let name of cumleArr ">{{name}}</mat-list-item>
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu14 = !showSubSubMenu14" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Cümlə üzvləri. Cümlənin qrammatik əsası</span
+      >
+      <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu14 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      >
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu14 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu14">
+        <mat-list-item routerLink="not-available" *ngFor="let name of cumleuzvleriArr ">{{name}}</mat-list-item>
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu15 = !showSubSubMenu15" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Əlavələr</span
+      >
+      <!-- <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu15 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      > -->
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu15 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu15">
+        <!-- <mat-list-item routerLink="not-available" *ngFor="let name of cumleuzvleriArr ">{{name}}</mat-list-item> -->
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu16 = !showSubSubMenu16" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Həmcins üzvlər</span
+      >
+      <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu16 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      >
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu16 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu16">
+        <mat-list-item routerLink="not-available" *ngFor="let name of hemcinsArr ">{{name}}</mat-list-item>
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu17 = !showSubSubMenu17" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Xitab. Ara sözlər</span
+      >
+      <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu17 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      >
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu17 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu17">
+        <mat-list-item routerLink="not-available" *ngFor="let name of xitabArr ">{{name}}</mat-list-item>
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu18 = !showSubSubMenu18" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Mürəkkəb cümlənin növləri</span
+      >
+      <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu18 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      >
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu18 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu18">
+        <mat-list-item routerLink="not-available" *ngFor="let name of murekkebArr ">{{name}}</mat-list-item>
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu19 = !showSubSubMenu19" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Vasitəli və vasitəsiz nitq</span
+      >
+      <!-- <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu19 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      > -->
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu19 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu19">
+        <!-- <mat-list-item routerLink="not-available" *ngFor="let name of murekkebArr ">{{name}}</mat-list-item> -->
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu21 = !showSubSubMenu21" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Durğu işarələri</span
+      >
+      <!-- <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu21 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      > -->
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu21 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu21">
+        <!-- <mat-list-item routerLink="not-available" *ngFor="let name of murekkebArr ">{{name}}</mat-list-item> -->
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu22 = !showSubSubMenu22" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Dil. Nitq mədəniyyəti</span
+      >
+      <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu22 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      >
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu22 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu22">
+        <mat-list-item routerLink="not-available" *ngFor="let name of dilArr ">{{name}}</mat-list-item>
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu23 = !showSubSubMenu23" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Üslubiyyat. Üslublar</span
+      >
+      <!-- <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu23 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      > -->
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu23 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu23">
+        <!-- <mat-list-item routerLink="not-available" *ngFor="let name of dilArr ">{{name}}</mat-list-item> -->
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu20 = !showSubSubMenu20" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Cümlə və cümlə üzvlərinə görə təhlil</span
+      >
+      <!-- <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu20 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      > -->
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu20 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu20">
+        <!-- <mat-list-item routerLink="not-available" *ngFor="let name of murekkebArr ">{{name}}</mat-list-item> -->
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+
+  
+
+
+
   </mat-sidenav>
 
   <div class="example-sidenav-content">
