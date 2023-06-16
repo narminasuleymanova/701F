@@ -1436,6 +1436,239 @@
     </div>
   </mat-nav-list>
 
+    <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu11 = !showSubSubMenu11" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Conjunctions</span
+      >
+      <!-- <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu11 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      > -->
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu11 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu11">
+        <!-- <mat-list-item *ngFor="let name of passiveArr ">{{name}}</mat-list-item> -->
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu12 = !showSubSubMenu12" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Conjunctive words</span
+      >
+      <!-- <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu12 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      > -->
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu12 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu12">
+        <!-- <mat-list-item *ngFor="let name of passiveArr ">{{name}}</mat-list-item> -->
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+    <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu13 = !showSubSubMenu13" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >The Agreement of the Predicate with the Subject</span
+      >
+      <!-- <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu13 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      > -->
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu13 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu13">
+        <!-- <mat-list-item *ngFor="let name of passiveArr ">{{name}}</mat-list-item> -->
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+      <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu14 = !showSubSubMenu14" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Preposition</span
+      >
+      <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu14 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      >
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu14 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu14">
+        <mat-list-item *ngFor="let name of prepositionArr ">{{name}}</mat-list-item>
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu15 = !showSubSubMenu15" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Interrogative Words and Sentences </span
+      >
+      <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu15 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      >
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu15 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu15">
+        <mat-list-item *ngFor="let name of interrogativeArr ">{{name}}</mat-list-item>
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu16 = !showSubSubMenu16" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Making up Sentences </span
+      >
+      <!-- <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu16 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      > -->
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu16 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu16">
+        <!-- <mat-list-item *ngFor="let name of sentencesArr ">{{name}}</mat-list-item> -->
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu17 = !showSubSubMenu17" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Indirect (Reported) Speech. Embedded (Indirect) Questions</span
+      >
+      <!-- <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu17 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      > -->
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu17 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu17">
+        <!-- <mat-list-item *ngFor="let name of sentencesArr ">{{name}}</mat-list-item> -->
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu18 = !showSubSubMenu18" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Synonyms</span
+      >
+      <!-- <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu18 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      > -->
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu18 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu18">
+        <!-- <mat-list-item *ngFor="let name of sentencesArr ">{{name}}</mat-list-item> -->
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu19 = !showSubSubMenu19" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Antonyms</span
+      >
+      <!-- <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu19 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      > -->
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu19 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu19">
+        <!-- <mat-list-item *ngFor="let name of sentencesArr ">{{name}}</mat-list-item> -->
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu20 = !showSubSubMenu20" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Exclamatory sentences</span
+      >
+      <!-- <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu20 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      > -->
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu20 }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu20">
+        <!-- <mat-list-item *ngFor="let name of sentencesArr ">{{name}}</mat-list-item> -->
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+
+
+
 
   
 </mat-sidenav>

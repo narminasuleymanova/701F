@@ -101,6 +101,8 @@ export class HomeComponent implements OnInit {
   pronounsArr: string[] = ['Personal Pronouns. Possessive Pronouns. Reflexive Pronouns. Demonstrative Pronouns', 'Negative Pronouns. Indefinite Pronouns. Defining Pronouns']
   tenseArr: string[] = ['Simple Tense Forms', 'Continuous Tense Forms', 'Perfect Tense Forms', '•	Perfect Continuous Tense Forms']
   passiveArr: string[] = ['Changing Declarative Sentences into Passive', 'Changing Interrogative Sentences into Passive', 'Choosing Sentences in Passive ']
+  prepositionArr: string[] = ['Verbs and Non-Finite Forms of the Verbs', 'Complex Objects. Regular and Irregular Verbs', 'Gerunds, Participles( I, II), Passive Causatives ']
+  interrogativeArr: string[] = ['Question Words', 'Disjunctive questions', 'Questions given to the secondary parts of sentences. Questions given to the subject and its attributes', 'Questions with “have” as a notional verb or a modal equivalent']
 
   constructor(
     public authenticationService: AuthenticationService,
