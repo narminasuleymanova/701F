@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Router } from "@angular/router";
+import { HotToastService } from "@ngneat/hot-toast";
 
 @Component({
   selector: 'app-az-dili',
@@ -7,13 +8,24 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   styleUrls: ['./az-dili.component.scss']
 })
 export class AzDiliComponent implements OnInit {
+  
+  more: boolean = false;
+  seeMore: boolean = true;
 
-  safeSrc: SafeResourceUrl;
-  constructor(private sanitizer: DomSanitizer) { 
-    this.safeSrc =  this.sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/j4e4cbc4Kyw");
-  }
-
+  constructor(private router: Router, private toast: HotToastService,) {}
   ngOnInit(): void {
   }
+  
+  moreInfo() {
+    this.more=!this.more;
+    this.seeMore=!this.seeMore;
+  }
 
+  next(){
+    this.router.navigate(['home/sait'])
+  }
+
+  before() {
+    this.toast.error('Siz lap əvvəldəsiz');
+  }
 }

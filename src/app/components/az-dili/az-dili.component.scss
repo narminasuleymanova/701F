@@ -1,0 +1,37 @@
+
+h3 {
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.subtitle {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+button {
+    margin: 5px;
+}
+
+.seeMore{
+    font-weight: 800;
+}
+
+.dis-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

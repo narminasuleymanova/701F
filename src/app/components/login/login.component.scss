@@ -1,51 +1,93 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto+Condensed:wght@300&family=Space+Mono&display=swap");
 
+ 
+
 .block {
+
     background: linear-gradient(50.99deg, rgba(218, 30, 116, 0.3) 15.33%, rgba(36, 33, 69, 0.3) 84.68%),
+
      linear-gradient(106.52deg, #DA1E74 0%, #242145 100%);
+
      width: 100%;
+
      height: 100%;
+
 }
+
+ 
 
 .sign-up-link {
+
     font-size: 1.2rem;
+
     margin-left: 8px;
+
 }
+
+ 
 
 .pad{
+
     padding: 10px;
+
     margin-left: 10px;
+
 }
+
+ 
 
 #cta701 {
-    height: 150px;
-    width: 150px;
+
+    height: 100px;
+
+    width: 100px;
+
     cursor: pointer;
+
 }
+ 
 
 .form-container {
+
     background: rgba(255, 255, 255, 0.5);
-    border: 1px solid #000000;
+
+    border: 1px;
+
     backdrop-filter: blur(48.5194px);
-    border-radius: 97.0388px;
+
     border-radius: 90px;
+
+
     height: 400px;
+
+    margin-top: -70px;
+
 }
+
+ 
 
 .title {
+
     font-weight: bold;
+
     font-family: "Poppins";
+
     font-size: 30px;
+
 }
+
+ 
 
 .button {
+
     background-color: #E4005C;
+
     color: #fff;
+
 }
 
-.mat-form-field-appearance-legacy .mat-hint
- {
-    color: red;
-}
+ 

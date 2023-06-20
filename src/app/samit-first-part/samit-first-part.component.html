@@ -1,0 +1,28 @@
+<div class="main">
+    <div class="container">
+      <div class="subtitle">
+        <h2>Samitlər, növləri və tələffüzü (1-ci hissə)</h2>
+        <div class="btn-div">
+          <button (click)="before()" mat-raised-button>Öncəki</button>
+          <button (click)="next()" mat-raised-button>Sonrakı</button>
+        </div>
+      </div>
+      <div class="dis-flex">
+      <video width="800px" height="450px" controls>
+        <source src="../../assets/samitlər 1.mp4" type="video/mp4" />
+      </video>
+    </div>
+      <div>
+          <button mat-raised-button color="primary">Like</button>
+          <button mat-raised-button color="warn">Dislike</button>
+        <h2>Transkript</h2>
+        <p>
+            Samit səslərin sait səslərdən çox olmasının səbəbi məhz öz anatomiyamızdır. Hava yollarımızda maneə törədərək səs yaratmağın maneəsiz tələffüzdən daha çox yolları var. Bəs maneə deyəndə nələr nəzərdə tutulur?
+            <span class="seeMore" *ngIf="seeMore" (click)="moreInfo()" >Daha çox...</span>
+          <span *ngIf="more"> Bunu öyrənmək üçün özün həm sait səsləri, həm də samit səsləri deyib yoxlaya bilərsən. Növbəti dərsimizdə sizi maraqlı məlumat gözləyir. Sait və samit səslərin fərqini öyrəndikdən sonra dərhal növbəti dərsimizə keç. 
+            <span class="seeMore" (click)="moreInfo()" >Daha az...</span> </span>
+        </p>
+      </div>
+    </div>
+  </div>
+  

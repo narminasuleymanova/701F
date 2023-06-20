@@ -1,0 +1,36 @@
+<div class="main">
+    <div class="container">
+      <div class="subtitle">
+        <h2>Samitlər, növləri və tələffüzü (2-ci hissə)</h2>
+        <div class="btn-div">
+          <button (click)="before()" mat-raised-button>Öncəki</button>
+          <button (click)="next()" mat-raised-button>Sonrakı</button>
+        </div>
+      </div>
+      <div class="dis-flex">
+      <video width="800px" height="450px" controls>
+        <source src="../../assets/Az dili samitlər 2.mp4" type="video/mp4" />
+      </video>
+    </div>
+      <div>
+          <button mat-raised-button color="primary">Like</button>
+          <button mat-raised-button color="warn">Dislike</button>
+        <h2>Transkript</h2>
+        <p>
+            (R hərfi ekranda görünür) Bu səs samitdir, düzdümü? Amma Çex dilində bu səs saitdir. Vyetnamcada isə 84 sait olsa da samitlərin sayı 19-dur. Bəs öz dilimizdə necə? Azərbaycan dilində 23 samit hərf, 25 samit səs var.
+            <span class="seeMore" *ngIf="seeMore" (click)="moreInfo()" >Daha çox...</span>
+          <span *ngIf="more"> Bəs bu əlavə 2 səs hansılardır? 
+
+            K - Bu samit həm [k], həm də [k] kimi tələffüz olunur. Məsələn, [keyfiyyət] [komanda]
+            [X’] - Bu səs iyh olaraq səslənir. Məsələn, [çörəx’]
+            
+            Samitlərin təkcə küydən yaranan kar və həm küydən, həm avazdan yaranan cingiltili səslər olduğunu yəqin ki, artıq bilirsiniz. Bəs nədir bu küy və avaz? Gəlin birlikdə [t] və [d] səslərini yoxlayaq. Diqqət etdinizsə d səsində bir səs çaları var. T hərfi isə maneəyə rast gəlməsə də əlavə səs çaları da yoxdur. Yəni kar samitlər nə saitlər qədər tamamilə maneəsizdir, nə də cingiltili səslər qədər doludur. Bir də sonor samitlər var, hansı ki, onların kar qarşılığı yoxdur. Cingiltili qarşılığı olmayan samit yoxdurmu? Var. Kökü insanların çəpəri ifadə etmək üçün istifadə etdiyi hərf olan H səsi. 
+            
+            Indi isə bu musiqini dinləyin. Növbəti dərsimizdə bunun gözəl səslənməsinin səbəbindən danışacağıq. Elə indi növbəti videoya keç.
+             
+            <span class="seeMore" (click)="moreInfo()" >Daha az...</span> </span>
+        </p>
+      </div>
+    </div>
+  </div>
+  

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { Router } from "@angular/router";
+import { HotToastService, Toast } from "@ngneat/hot-toast";
 import { AuthenticationService } from "src/app/services/authentication.service";
 
 @Component({
@@ -48,8 +49,6 @@ export class HomeComponent implements OnInit {
   colorAz: string = '#FFFFFF';
   colorEn: string = '#FFFFFF';
 
-  
-  
   naturalEdedlerArr: string[] = ['Onluq say sistemində yazılış', 'Toplanma, çıxılma, vurulma və bölünmə', 'Bölünmə əlamətləri', 'Qalıqlı bölmə', 'Sadə vuruqlara ayrılış', 'Ən böyük ortaq bölən (ƏBOB)', 'Ən kiçik ortaq bölən (ƏKOB)' ]
   kesrlerArr: string[] = ['Toplanma, çıxılma, vurulma və bölünmə', 'Düzgün və düzgün olmayan kəsrlər', 'Sonsuz dövrü onluq kəsrlər', 'Adi kəsrin onluq kəsrə çevrilməsi', 'Onluq kəsrin adi kəsrə çevrilməsi', 'Kəsrlərin müqayisəsi'] 
   nisbetArr: string[] = ['Nisbət. Tənasüb', 'Tənasübün xassələri', 'Düz və tərs mütənasiblik', 'Faiz. Ədədin faizinin tapılması', 'Faizinə görə ədədin tapılması','İki ədədin faiz nisbəti', 'Faizə aid məsələlər' ]
@@ -104,9 +103,11 @@ export class HomeComponent implements OnInit {
   prepositionArr: string[] = ['Verbs and Non-Finite Forms of the Verbs', 'Complex Objects. Regular and Irregular Verbs', 'Gerunds, Participles( I, II), Passive Causatives ']
   interrogativeArr: string[] = ['Question Words', 'Disjunctive questions', 'Questions given to the secondary parts of sentences. Questions given to the subject and its attributes', 'Questions with “have” as a notional verb or a modal equivalent']
 
+
   constructor(
     public authenticationService: AuthenticationService,
-    private router: Router
+    private router: Router,
+    private toast : HotToastService
   ) {}
 
   ngOnInit(): void {}
@@ -155,5 +156,9 @@ export class HomeComponent implements OnInit {
       this.authenticationService.currentUser$;
       this.router.navigate(["/"]);
     });
+  }
+
+  beta() {
+    this.toast.error('Hal-hazırda Siz saytın beta versiyasındandan istifadə edirsiniz');
   }
 }

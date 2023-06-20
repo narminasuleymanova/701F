@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
         })
       )
       .subscribe(() => {
-        this.router.navigate(['/home/mycourses']);
+        this.router.navigate(['/home/math-intro']);
       });
   }
 }

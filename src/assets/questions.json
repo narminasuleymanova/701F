@@ -1,0 +1,112 @@
+[
+    {
+      "questionId": 1,
+      "question": "420 ədədindən kiçik olub onunla qarşılıqlı sadə olan ədədlərin sayı ilə müsbət bölənlərin sayının cəmini tapın ", 
+      "options": [
+          {
+              "answer": "96",
+              "isCorrect": false
+          },
+          {
+              "answer": "110",
+              "isCorrect": false
+          },
+          {
+              "answer": "24",
+              "isCorrect": false
+          },
+          {
+              "answer": "120",
+              "isCorrect": true
+          }
+      ]
+    },
+    {
+      "questionId": 2,
+      "question": "A=4583,  B=25877 olarsa AB hasilinin 5-ə bölünməsindən alınan qalığı tapın", 
+      "options": [
+          {
+              "answer": "1",
+              "isCorrect": true
+          },
+          {
+              "answer": "3",
+              "isCorrect": false
+          },
+          {
+              "answer": "4",
+              "isCorrect": false
+          },
+          {
+              "answer": "0",
+              "isCorrect": false
+          }
+      ]
+    },
+    {
+      "questionId": 3,
+      "question": "572+952  ədədinin sadə vuruqlarının sayını tapın", 
+      "options": [
+          {
+              "answer": "3",
+              "isCorrect": false
+          },
+          {
+              "answer": "4",
+              "isCorrect": true
+          },
+          {
+              "answer": "1",
+              "isCorrect": false
+          },
+          {
+              "answer": "2",
+              "isCorrect": false
+          }
+      ]
+    },
+    {
+      "questionId": 4,
+      "question": "300 ədədinin natural bölənlərinin sayını tapın", 
+      "options": [
+          {
+              "answer": "30",
+              "isCorrect": false
+          },
+          {
+              "answer": "18",
+              "isCorrect": true
+          },
+          {
+              "answer": "12",
+              "isCorrect": false
+          },
+          {
+              "answer": "15",
+              "isCorrect": false
+          }
+      ]
+    },
+    {
+      "questionId": 5,
+      "question": "400...0 sıfırların sayı n-dir. Bu ədədin müsbət bölənlərinin sayı 80-dir. n-i tapın ", 
+      "options": [
+          {
+              "answer": "5",
+              "isCorrect": false
+          },
+          {
+              "answer": "7",
+              "isCorrect": true
+          },
+          {
+              "answer": "10",
+              "isCorrect": false
+          },
+          {
+              "answer": "8",
+              "isCorrect": false
+          }
+      ]
+    }
+  ]

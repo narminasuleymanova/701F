@@ -23,6 +23,30 @@ h3 {
 }
 
 button {
-    font-size: small;
-    margin-bottom: 10px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.seeMore{
+    font-weight: 800;
+}
+
+.dis-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transkript {
+    margin-top: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 0.862257px 10px #CCCCCC;
+    border-radius: 25px;
+    width: 90%;
+    margin-left: 40px;
+    
+}
+
+.transkript__text {
+    padding: 20px;
 }

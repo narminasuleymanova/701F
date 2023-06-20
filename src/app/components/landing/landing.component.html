@@ -13,11 +13,11 @@
     <img src="../../../assets/novademy logo FINAL (white).png" alt="701" class="firstBlock__logo" />
     <button *ngIf="!(user$ | async)" routerLink="login" type="button" class="firstBlock__button firstBlock__button__login">Giriş</button>
     <button *ngIf="!(user$ | async)" routerLink="sign-up" type="button" class="firstBlock__button firstBlock__button__signup">Qeydiyyat</button>
-    <button *ngIf="user$ | async as user"  routerLink="home" type="button" class="firstBlock__button firstBlock__button__signup">Şəxsi kabinet</button>
+    <button *ngIf="user$ | async as user"  routerLink="home/math-intro" type="button" class="firstBlock__button firstBlock__button__signup">Şəxsi kabinet</button>
     <button type="button" class="firstBlock__button firstBlock__button__freetrial">Start Free Trial</button>
     <p class="firstBlock__text_slogan">Abituriyent həyatını bizimlə asanlaşdır</p>
     <p class="firstBlock__text_lorem">
-      701 ilə imtahanlara əyləncəli və sərfəli dərslərlə hazırlaşın, stereotipləri bizimlə qırın!
+      novademy ilə imtahanlara əyləncəli və sərfəli hazırlaşın, stereotipləri bizimlə qırın!
     </p>
     <img src="../../../assets/girl_landing_page.png" alt="firstBlock__image" class="firstBlock__image">
   </div>

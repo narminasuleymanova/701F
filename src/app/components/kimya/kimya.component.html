@@ -1,1 +1,59 @@
-<h1>Zəhmət olmasa, bölmə seçin</h1>
+<div class="start_btn"><button (click)="showWarningPopup()">Testə başla!</button></div> 
+
+<div class="info_box" [ngClass]="showWarning ? 'activeInfo':''">
+    <div class="info-title"><span>Qaydalar</span></div>
+    <div class="info-list">
+        <div class="info">1. Hər sual üçün <span>10 saniyə</span> vaxtınız olacaq.</div>
+        <div class="info">2. Cavabınızı seçdikdən sonra onu geri qaytarmaq mümkün deyil.</div>
+        <div class="info">3. Vaxt bitdikdən sonra heç bir seçimi seçə bilməzsiniz.</div>
+        <div class="info">4. Başladıqdan sonra testdən çıxa bilməzsiniz.</div> 
+    </div>
+    <div class="buttons">
+        <button class="quit" (click)="start()">Çıxış</button>
+        <button class="restart" (click)="startQuiz()">Davam</button>
+    </div>
+</div>  
+
+<div class="quiz_box" [ngClass]="isQuizStarted? 'activeQuiz':''">
+    <header>
+        <div class="title">Natural ədədlər</div>
+        <div class="timer">
+            <div class="time_left_txt">Saniyyə:</div>
+            <div class="timer_sec">{{remainingTime}}</div>
+        </div>
+        <div class="time_line" style="width: 550px;"></div>
+    </header>
+    <section *ngIf="isQuizStarted">
+        <div class="que_text"><span>{{currentQuestionNo+1}}. {{questionsList[currentQuestionNo].question}} </span></div>
+        <div class="option_list">
+            <div class="option"  [ngClass]="{'disabled': isOptionSelected(questionsList[currentQuestionNo].options),
+                                            'correct':option.isSelected && option.isCorrect,
+                                            'incorrect':option.isSelected  && !option.isCorrect}" (click)="selectOption(option)" *ngFor="let option of questionsList[currentQuestionNo].options">
+                <span>{{option.answer}}</span> 
+            </div> 
+        </div>
+    </section> 
+
+    <footer>
+        <div class="total_que"><span>
+                <p>{{currentQuestionNo+1}}</p> of <p>{{questionsList.length}}</p> Suallar
+            </span></div>
+        <button *ngIf="currentQuestionNo+1 == questionsList.length" class="next_btn show" (click)="finish()">Bitirmək</button>
+        <button *ngIf="currentQuestionNo+1 !== questionsList.length" class="next_btn show" (click)="nextQuestion()">Növbəti sual</button>
+    </footer>
+</div>
+
+
+<div class="result_box" [ngClass]="isQuizEnded?'activeResult':''">
+    <div class="icon">
+        <i class="fas fa-crown"></i>
+    </div>
+    <div class="complete_text">Testi tamamladınız!</div>
+    <div class="score_text">
+        <span> <p>{{questionsList.length}}</p> sualdan  duzgün cavabların sayı <p>{{correctAnswerCount}}</p></span>'
+    </div>
+    <div class="buttons">
+        <button class="restart" (click)="retest()">Təkrar test</button>
+        <button class="quit" (click)="resetComponent()">Çıxış</button>
+    </div>
+</div>

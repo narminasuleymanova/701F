@@ -1,0 +1,32 @@
+<div class="main">
+    <div class="container">
+      <div class="subtitle">
+        <h2>Natural ədədlərin toplanması, çıxılması, vurulması və
+            bölünməsi</h2>
+        <div class="btn-div">
+          <button (click)="before()" mat-raised-button>Öncəki</button>
+          <button (click)="next()" mat-raised-button>Sonrakı</button>
+        </div>
+      </div>
+      <div class="dis-flex">
+      <video width="800px" height="450px" controls>
+        <source src="" type="video/mp4" />
+      </video>
+    </div>
+      <div>
+          <button mat-raised-button color="primary">Like</button>
+          <button mat-raised-button color="warn">Dislike</button>
+        <h2>Transkript</h2>
+        <p>
+            Keçən videoda Piraha icmasına saymağı öyrətdik. İndi qayıdaq gündəlik həyatımıza. Tələbəliyi xəyal edək. Deyək 3 dostunla universitetə yaxın ərazidə ev kirayə götürmüsünüz. Ortaq xərcləriniz və ayrılıqda gəliriniz var. Əlbəttə ki, evdəki ümumi xərclər ortaq bölünməlidir.
+            <span class="seeMore" *ngIf="seeMore" (click)="moreInfo()" >Daha çox...</span>
+          <span *ngIf="more">Bu zaman biz natural ədədlər üzərində olan əməllərdən, yəni toplama, çıxılma, vurulma və bölünmədən istifadə edəcəyik. Məsələn, ev sahibinə nə qədər ödəyəciyini bilmək üçün kirayə məbləğini 4-ə böləcəksiniz. Hər kəs ödədiyi məbləği öz gəlirindən çıxacaq ki, nə qədər pulu qaldığını hesablasın. Əlavə pulu isə təqaüdü ilə toplayacaqsınız ki, nə qədər pulunuz olduğunu biləsiniz. Unutmayın ki, əgər bu əməlləri bir misalda etməli olsanız, ilk vurma və ya bölmə, daha sonra toplama və çıxma aparılır. 
+
+            Bir şeyi xatırlayaq ki, tələbə evində bölünməli məsələlərdən biri də ev işləridir. Bu gün yeməyi kim bişirəcək, qabları kim yuyacaq, bu həftə evi kim təmizləyəcək kimi məsələləri öz aranızda ədalətli bölməlisiniz. Bu misaldan da gördüyün kimi bölmə əməli həmişə rahatlıqla aparılmaya bilir. Bunu isə sonrakı dərsimizdə danışacağıq. 
+            
+            <span class="seeMore" (click)="moreInfo()" >Daha az...</span> </span>
+        </p>
+      </div>
+    </div>
+  </div>
+  

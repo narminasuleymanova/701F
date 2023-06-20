@@ -1,11 +1,11 @@
 <div class="container">
   <div routerLink="" class="pad">
-    <img src="../../../assets/701 purple 2.png" alt="701" />
+    <img src="../../../assets/LOGO COLORED.png" alt="novademy"/>
   </div>
   <div class="btn-div">
-    <button mat-raised-button (click)="clickMath()" [style.background]="colorMath">Riyaziyyat</button>
-    <button mat-raised-button (click)="clickAzerb()" [style.background]="colorAz">Azərbaycan dili</button>
-    <button mat-raised-button (click)="clickEnglish()" [style.background]="colorEn">İngilis dili</button>
+    <button mat-raised-button routerLink="math-intro" (click)="clickMath()" [style.background]="colorMath">Riyaziyyat</button>
+    <button mat-raised-button routerLink="az-intro" (click)="clickAzerb()" [style.background]="colorAz">Azərbaycan dili</button>
+    <button mat-raised-button routerLink="not-available"  (click)="clickEnglish()" [style.background]="colorEn">İngilis dili</button>
   </div>
   <div class="center margin-right">
     <button (click)="logout()" type="submit" mat-raised-button style="background-color: #E4005C; color: #fff;">
@@ -23,60 +23,61 @@
     (mouseenter)="mouseenter()"
     (mouseleave)="mouseleave()"
   >
-    <mat-nav-list>
-      <mat-list-item (click)="naturalEdedler = !naturalEdedler" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing"
-          >Natural ədədlər</span
-        >
-        <mat-icon
-          class="menu-button"
-          [ngClass]="{ rotated: naturalEdedler }"
-          *ngIf="isExpanded || isShowing"
-          >expand_more</mat-icon
-        >
-      </mat-list-item>
-      <div
-        class="submenu"
-        [ngClass]="{ expanded: naturalEdedler }"
-        *ngIf="isShowing || isExpanded"
+
+  <mat-nav-list>
+    <mat-list-item class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing"
+        >Giriş</span
       >
-        <ng-container *ngIf="naturalEdedler">
-          <mat-list-item routerLink="math" routerLinkActive="active"
-            >Natural ədədlərin onluq say sistemində yazılışı</mat-list-item
-          >
-          <mat-list-item routerLink="video-player" routerLinkActive="active"
-            >Natural ədədlərin toplanması, çıxılması, vurulması və
-            bölünməsi</mat-list-item
-          >
-          <mat-list-item *ngFor="let name of naturalEdedlerArr">{{
-            name
-          }}</mat-list-item>
-        </ng-container>
-      </div>
-    </mat-nav-list>
+      <!-- <mat-icon
+        class="menu-button"
+        [ngClass]="{ rotated: showSubSubMenu2 }"
+        *ngIf="isExpanded || isShowing"
+        >expand_more</mat-icon
+      > -->
+    </mat-list-item>
+    <div
+      class="submenu"
+      [ngClass]="{ expanded: showSubSubMenu }"
+      *ngIf="isShowing || isExpanded"
+    >
+      <ng-container *ngIf="showSubSubMenu">
+        <!-- <mat-list-item (click)="beta()" *ngFor="let name of kesrlerArr ">{{name}}</mat-list-item> -->
+      </ng-container>
+    </div>
+  </mat-nav-list>
+    
+  <mat-nav-list>
+    <mat-list-item (click)="showSubSubMenu = !showSubSubMenu" class="parent">
+      <span class="full-width" *ngIf="isExpanded || isShowing">Natural ədədlər</span>
+      <mat-icon class="menu-button" [ngClass]="{ rotated: showSubSubMenu }" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
+    </mat-list-item>
+    <div class="submenu" [ngClass]="{ expanded: showSubSubMenu }" *ngIf="isShowing || isExpanded">
+      <ng-container *ngIf="showSubSubMenu">
+        <mat-list-item *ngFor="let name of  naturalEdedlerArr">
+          <span class="dot"></span> {{ name }}
+        </mat-list-item>
+        <mat-list-item routerLink="test" routerLinkActive="active"
+        > <span class="dot"></span> Natural ədədlər - Test</mat-list-item
+      >
+      </ng-container>
+    </div>
+  </mat-nav-list>
 
     <mat-nav-list>
       <mat-list-item (click)="showSubSubMenu2 = !showSubSubMenu2" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing"
-          >Adi və onluq kəsrlər</span
-        >
-        <mat-icon
-          class="menu-button"
-          [ngClass]="{ rotated: showSubSubMenu2 }"
-          *ngIf="isExpanded || isShowing"
-          >expand_more</mat-icon
-        >
+        <span class="full-width" *ngIf="isExpanded || isShowing">Adi və onluq kəsrlər</span>
+        <mat-icon class="menu-button" [ngClass]="{ rotated: showSubSubMenu2 }" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
       </mat-list-item>
-      <div
-        class="submenu"
-        [ngClass]="{ expanded: showSubSubMenu2 }"
-        *ngIf="isShowing || isExpanded"
-      >
+      <div class="submenu" [ngClass]="{ expanded: showSubSubMenu2 }" *ngIf="isShowing || isExpanded">
         <ng-container *ngIf="showSubSubMenu2">
-          <mat-list-item routerLink="not-available" *ngFor="let name of kesrlerArr ">{{name}}</mat-list-item>
+          <mat-list-item *ngFor="let name of kesrlerArr">
+            <span class="dot"></span> {{ name }}
+          </mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
+    
 
     <mat-nav-list>
       <mat-list-item (click)="showSubSubMenu3 = !showSubSubMenu3" class="parent">
@@ -96,7 +97,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu3">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of nisbetArr ">{{name}}</mat-list-item>
+          <mat-list-item (click)="beta()"  *ngFor="let name of nisbetArr "><span class="dot"></span>{{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -119,7 +120,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu4">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of ededlerArr ">{{name}}</mat-list-item>
+          <mat-list-item (click)="beta()"  *ngFor="let name of ededlerArr "><span class="dot"></span>{{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -142,7 +143,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu5">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of cebriArr ">{{name}}</mat-list-item>
+          <mat-list-item (click)="beta()"  *ngFor="let name of cebriArr "><span class="dot"></span>{{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -165,7 +166,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu6">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of vuruqArr ">{{name}}</mat-list-item>
+          <mat-list-item (click)="beta()"  *ngFor="let name of vuruqArr "><span class="dot"></span>{{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -188,7 +189,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu7">
-          <mat-list-item routerLink="not-available" *ngFor="let name of rasionalArr ">{{name}}</mat-list-item>
+          <mat-list-item (click)="beta()" *ngFor="let name of rasionalArr "><span class="dot"></span>{{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -211,7 +212,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu8">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of koklerArr ">{{name}}</mat-list-item>
+          <mat-list-item (click)="beta()"  *ngFor="let name of koklerArr "><span class="dot"></span>{{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -234,7 +235,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu9">
-          <mat-list-item *ngFor="let name of birmechulluArr ">{{name}}</mat-list-item>
+          <mat-list-item (click)="beta()" *ngFor="let name of birmechulluArr "><span class="dot"></span>{{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -257,7 +258,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu10">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of sistemArr ">{{name}}</mat-list-item>
+          <mat-list-item (click)="beta()"  *ngFor="let name of sistemArr "><span class="dot"></span>{{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -280,7 +281,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu11">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of berabersizliklerArr ">{{name}}</mat-list-item>
+          <mat-list-item routerLink="not-available"  *ngFor="let name of berabersizliklerArr "><span class="dot"></span>{{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -303,7 +304,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu12">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of ardicilliqlarArr ">{{name}}</mat-list-item>
+          <mat-list-item routerLink="not-available"  *ngFor="let name of ardicilliqlarArr "><span class="dot"></span>{{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -349,7 +350,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu14">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of hendesArr ">{{name}}</mat-list-item>
+          <mat-list-item routerLink="not-available"  *ngFor="let name of hendesArr "><span class="dot"></span> {{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -372,7 +373,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu15">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of ucbucaqlarArr ">{{name}}</mat-list-item>
+          <mat-list-item routerLink="not-available"  *ngFor="let name of ucbucaqlarArr "><span class="dot"></span> {{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -395,7 +396,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu16">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of dordbucaqlarArr ">{{name}}</mat-list-item>
+          <mat-list-item routerLink="not-available"  *ngFor="let name of dordbucaqlarArr "><span class="dot"></span> {{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -418,7 +419,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu17">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of cevreArr ">{{name}}</mat-list-item>
+          <mat-list-item routerLink="not-available"  *ngFor="let name of cevreArr "><span class="dot"></span> {{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -441,7 +442,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu18">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of funksiyalarArr ">{{name}}</mat-list-item>
+          <mat-list-item routerLink="not-available"  *ngFor="let name of funksiyalarArr "><span class="dot"></span> {{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -464,7 +465,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu19">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of triqonometrikArr ">{{name}}</mat-list-item>
+          <mat-list-item routerLink="not-available"  *ngFor="let name of triqonometrikArr "><span class="dot"></span> {{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -487,7 +488,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu20">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of triqonometriktoplamaArr ">{{name}}</mat-list-item>
+          <mat-list-item routerLink="not-available"  *ngFor="let name of triqonometriktoplamaArr "><span class="dot"></span> {{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -510,7 +511,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu21">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of triqonometriktenliklerArr ">{{name}}</mat-list-item>
+          <mat-list-item routerLink="not-available"  *ngFor="let name of triqonometriktenliklerArr "><span class="dot"></span> {{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -533,7 +534,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu22">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of loqarifmikArr ">{{name}}</mat-list-item>
+          <mat-list-item routerLink="not-available"  *ngFor="let name of loqarifmikArr "><span class="dot"></span> {{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -556,7 +557,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu23">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of loqarifmiktenliklerArr ">{{name}}</mat-list-item>
+          <mat-list-item routerLink="not-available"  *ngFor="let name of loqarifmiktenliklerArr "><span class="dot"></span> {{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -579,7 +580,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu24">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of limitArr ">{{name}}</mat-list-item>
+          <mat-list-item routerLink="not-available"  *ngFor="let name of limitArr "><span class="dot"></span> {{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -602,7 +603,7 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu25">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of toremeArr ">{{name}}</mat-list-item>
+          <mat-list-item routerLink="not-available"  *ngFor="let name of toremeArr "><span class="dot"></span> {{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
@@ -625,13 +626,10 @@
         *ngIf="isShowing || isExpanded"
       >
         <ng-container *ngIf="showSubSubMenu26">
-          <mat-list-item routerLink="not-available"  *ngFor="let name of statistikaArr ">{{name}}</mat-list-item>
+          <mat-list-item routerLink="not-available"  *ngFor="let name of statistikaArr "><span class="dot"></span> {{name}}</mat-list-item>
         </ng-container>
       </div>
     </mat-nav-list>
-
-
-
 
 
   </mat-sidenav>
@@ -671,7 +669,10 @@
       *ngIf="isShowing || isExpanded"
     >
       <ng-container *ngIf="showSubSubMenu">
-        <mat-list-item routerLink="not-available"  *ngFor="let name of fonetikaArr ">{{name}}</mat-list-item>
+        <mat-list-item routerLink="sait"  routerLinkActive="active">Saitlər, növləri və tələffüzü</mat-list-item>
+        <mat-list-item routerLink="samit-1ci-hisse"  routerLinkActive="active">Samitlər, növləri və tələffüzü (1-ci hissə)</mat-list-item>
+        <mat-list-item routerLink="samit-2ci-hisse"  routerLinkActive="active">Samitlər, növləri və tələffüzü (2-ci hissə)</mat-list-item>
+        <mat-list-item (click)="beta()"  *ngFor="let name of fonetikaArr ">{{name}}</mat-list-item>
       </ng-container>
     </div>
   </mat-nav-list>
@@ -695,7 +696,7 @@
       *ngIf="isShowing || isExpanded"
     >
       <ng-container *ngIf="showSubSubMenu2">
-        <mat-list-item routerLink="not-available"  *ngFor="let name of leksikaArr ">{{name}}</mat-list-item>
+        <mat-list-item (click)="beta()"  *ngFor="let name of leksikaArr ">{{name}}</mat-list-item>
       </ng-container>
     </div>
   </mat-nav-list>
@@ -718,7 +719,7 @@
       *ngIf="isShowing || isExpanded"
     >
       <ng-container *ngIf="showSubSubMenu3">
-        <mat-list-item routerLink="not-available" *ngFor="let name of sozArr ">{{name}}</mat-list-item>
+        <mat-list-item (click)="beta()" *ngFor="let name of sozArr ">{{name}}</mat-list-item>
       </ng-container>
     </div>
   </mat-nav-list>
@@ -741,7 +742,7 @@
       *ngIf="isShowing || isExpanded"
     >
       <ng-container *ngIf="showSubSubMenu4">
-        <mat-list-item routerLink="not-available"  *ngFor="let name of isimArr ">{{name}}</mat-list-item>
+        <mat-list-item (click)="beta()"  *ngFor="let name of isimArr ">{{name}}</mat-list-item>
       </ng-container>
     </div>
   </mat-nav-list>
@@ -764,7 +765,7 @@
       *ngIf="isShowing || isExpanded"
     >
       <ng-container *ngIf="showSubSubMenu5">
-        <mat-list-item  routerLink="not-available" *ngFor="let name of sifetArr ">{{name}}</mat-list-item>
+        <mat-list-item  (click)="beta()" *ngFor="let name of sifetArr ">{{name}}</mat-list-item>
       </ng-container>
     </div>
   </mat-nav-list>
@@ -787,7 +788,7 @@
       *ngIf="isShowing || isExpanded"
     >
       <ng-container *ngIf="showSubSubMenu6">
-        <mat-list-item routerLink="not-available"  *ngFor="let name of sayArr ">{{name}}</mat-list-item>
+        <mat-list-item (click)="beta()"  *ngFor="let name of sayArr ">{{name}}</mat-list-item>
       </ng-container>
     </div>
   </mat-nav-list>
@@ -810,7 +811,7 @@
       *ngIf="isShowing || isExpanded"
     >
       <ng-container *ngIf="showSubSubMenu7">
-        <mat-list-item routerLink="not-available"  *ngFor="let name of evezlikArr ">{{name}}</mat-list-item>
+        <mat-list-item (click)="beta()"  *ngFor="let name of evezlikArr ">{{name}}</mat-list-item>
       </ng-container>
     </div>
   </mat-nav-list>
@@ -833,7 +834,7 @@
       *ngIf="isShowing || isExpanded"
     >
       <ng-container *ngIf="showSubSubMenu8">
-        <mat-list-item  routerLink="not-available" *ngFor="let name of feilArr ">{{name}}</mat-list-item>
+        <mat-list-item  (click)="beta()" *ngFor="let name of feilArr ">{{name}}</mat-list-item>
       </ng-container>
     </div>
   </mat-nav-list>
@@ -856,7 +857,7 @@
       *ngIf="isShowing || isExpanded"
     >
       <ng-container *ngIf="showSubSubMenu9">
-        <mat-list-item routerLink="not-available" *ngFor="let name of feilformaArr ">{{name}}</mat-list-item>
+        <mat-list-item (click)="beta()" *ngFor="let name of feilformaArr ">{{name}}</mat-list-item>
       </ng-container>
     </div>
   </mat-nav-list>
@@ -879,7 +880,7 @@
       *ngIf="isShowing || isExpanded"
     >
       <ng-container *ngIf="showSubSubMenu10">
-        <mat-list-item routerLink="not-available" *ngFor="let name of zerfArr ">{{name}}</mat-list-item>
+        <mat-list-item (click)="beta()" *ngFor="let name of zerfArr ">{{name}}</mat-list-item>
       </ng-container>
     </div>
   </mat-nav-list>
@@ -1183,11 +1184,6 @@
     </div>
   </mat-nav-list>
 
-
-  
-
-
-
   </mat-sidenav>
 
   <div class="example-sidenav-content">
@@ -1223,7 +1219,7 @@
       *ngIf="isShowing || isExpanded"
     >
       <ng-container *ngIf="showSubSubMenu">
-        <mat-list-item routerLink="not-available" *ngFor="let name of nounArr ">{{name}}</mat-list-item>
+        <mat-list-item (click)="beta()" *ngFor="let name of nounArr ">{{name}}</mat-list-item>
       </ng-container>
     </div>
   </mat-nav-list>
@@ -1436,7 +1432,7 @@
     </div>
   </mat-nav-list>
 
-    <mat-nav-list>
+  <mat-nav-list>
     <mat-list-item (click)="showSubSubMenu11 = !showSubSubMenu11" class="parent">
       <span class="full-width" *ngIf="isExpanded || isShowing"
         >Conjunctions</span
@@ -1665,10 +1661,6 @@
       </ng-container>
     </div>
   </mat-nav-list>
-
-
-
-
 
   
 </mat-sidenav>

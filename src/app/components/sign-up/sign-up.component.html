@@ -1,85 +1,166 @@
 <div class="block">
+
   <div routerLink="" class="pad">
+
     <img src="../../../assets/novademy logo FINAL (white).png" alt="701" id="cta701">
+
     </div>
+
   <div class="form-container mat-elevation-z5">
+
     <h1 class="title">Qeydiyyat</h1>
+
     <form [formGroup]="signUpForm" (ngSubmit)="submit()">
 
+ 
+
       <mat-form-field>
+
         <input
+
           matInput
+
           placeholder="Ad"
+
           formControlName="name"
+
         />
+
         <mat-error *ngIf="name?.errors?.['required']">
+
           Adınızı daxil edin
+
         </mat-error>
+
       </mat-form-field>
 
+ 
+
       <mat-form-field>
+
         <input
+
           matInput
+
           placeholder="Soyad"
+
           formControlName="surname"
+
         />
+
         <mat-error *ngIf="surname?.errors?.['required']">
+
           Soyadınızı daxil edin
+
         </mat-error>
+
       </mat-form-field>
 
+ 
+
       <mat-form-field>
+
         <input matInput placeholder="E-poçt" formControlName="email" />
+
         <mat-error *ngIf="email?.errors?.['required']">
+
           E-poçt ünvanı tələb olunur
+
         </mat-error>
+
         <mat-error *ngIf="email?.errors?.['email']">
+
           Etibarlı e-poçt ünvanı daxil edin
+
         </mat-error>
+
       </mat-form-field>
 
+ 
+
       <mat-form-field>
+
         <input
+
           matInput
+
           placeholder="Mobil nömrə"
+
           formControlName="phone"
+
         />
+
         <mat-error *ngIf="phone?.errors?.['required']">
+
           Mobil nömrəsini daxil edin
+
         </mat-error>
+
+      </mat-form-field>
+
+ 
+
+      <mat-form-field>
+
+        <input
+
+          matInput
+
+          type="password"
+
+          placeholder="Şifrə"
+
+          formControlName="password"
+
+        />
+
+        <mat-error *ngIf="password?.errors?.['required']">
+
+          Şifrə tələb olunur
+
+        </mat-error>
+
       </mat-form-field>
 
       <mat-form-field>
+
         <input
+
           matInput
+
           type="password"
-          placeholder="Şifrə"
-          formControlName="password"
-        />
-        <mat-error *ngIf="password?.errors?.['required']">
-          Şifrə tələb olunur
-        </mat-error>
-      </mat-form-field>
-      <mat-form-field>
-        <input
-          matInput
-          type="password"
+
           placeholder="Şifrə doğrulaması"
+
           formControlName="confirmPassword"
+
         />
+
         <mat-error *ngIf="confirmPassword?.errors?.['required']">
+
           Şifrə doğrulaması tələb olunur
+
         </mat-error>
+
       </mat-form-field>
+
       <mat-error *ngIf="signUpForm.errors?.['passwordsDontMatch']">
+
         Parollar uyğun olmalıdır
+
       </mat-error>
 
 
 
+
       <div class="center margin-top">
+
         <button type="submit" mat-raised-button class="button">Davam et</button>
+
       </div>
+
     </form>
+
   </div>
+
 </div>

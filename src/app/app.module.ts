@@ -28,6 +28,11 @@ import { GroupsComponent } from './components/groups/groups.component';
 import { VideoPlayerComponent } from './components/video-player/video-player.component';
 import { MathComponent } from './components/math/math.component';
 import { BlurComponent } from './components/blur/blur.component';
+import { Math2Component } from './math2/math2.component';
+import { SaitComponent } from './sait/sait.component';
+import { SamitFirstPartComponent } from './samit-first-part/samit-first-part.component';
+import { SamitSecondPartComponent } from './samit-second-part/samit-second-part.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -43,7 +48,11 @@ import { BlurComponent } from './components/blur/blur.component';
     GroupsComponent,
     VideoPlayerComponent,
     MathComponent,
-    BlurComponent
+    BlurComponent,
+    Math2Component,
+    SaitComponent,
+    SamitFirstPartComponent,
+    SamitSecondPartComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +65,7 @@ import { BlurComponent } from './components/blur/blur.component';
     MatInputModule,
     MatListModule,
     MatSidenavModule,
+    HttpClientModule,
     ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
