@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="dis-flex">
-    <video width="800px" height="450px" controls>
+    <video width="800px" height="450px" controls (ended)="videoEnded()">
       <source src="../../../assets/Riyaziyyat intro.mp4" type="video/mp4" />
     </video>
   </div>
@@ -22,6 +22,20 @@
         <span *ngIf="more">cavab tapacağıq. Mən Fazil Əhmədov isə sizə bu yolda sənə bələdçilik edəcəm. Elə indi növbəti videoya keç, başlayaq. <br><span class="seeMore" (click)="moreInfo()" style="color: #CCCCCC; cursor: pointer;">   Daha az gostər</span> </span>
       </p>
     </div>
+
+
+
+    </div>
+    <div class="comment_input">
+      <img src="../../../assets/Neutral-placeholder-profile.jpg" alt="" class="profile_picture">
+      <input type="text" value="Fikirlərini bölüş" class="comment" (keyup.enter)="onSubmit()" #input>
+    </div>
+    <div class="comment_answer" *ngIf="comments.length > 1">
+      <img src="../../../assets/Neutral-placeholder-profile.jpg" alt="" class="profile_picture" >
+      <div class="answers">
+        <span *ngIf="user$ | async as user" style="font-weight: bold; font-size: 20px; margin-left: 50px;" >{{user.email}} <br> <br></span>
+        <span style="margin-left: 50px;"> {{comments}}</span>
+      </div>
     </div>
   </div>
 </div>

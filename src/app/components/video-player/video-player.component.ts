@@ -1,6 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import { Router } from "@angular/router";
 import { HotToastService } from "@ngneat/hot-toast";
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: "app-video-player",
@@ -9,10 +10,18 @@ import { HotToastService } from "@ngneat/hot-toast";
 })
 export class VideoPlayerComponent implements OnInit {
 
+  @ViewChild('input') input?:ElementRef;
+
   more: boolean = false;
   seeMore: boolean = true;
 
-  constructor(private router: Router, private toast: HotToastService,) {}
+  comments: string = '';
+
+  user$ = this.authenticationService.currentUser$
+  
+  
+
+  constructor(private router: Router, private toast: HotToastService, private authenticationService: AuthenticationService) {}
   ngOnInit(): void {
   }
   
@@ -28,5 +37,12 @@ export class VideoPlayerComponent implements OnInit {
   before() {
     this.toast.error('Siz lap əvvəldəsiz');
   }
+  
+  onSubmit() {
+    this.comments = this.input?.nativeElement.value;
+    this.input!.nativeElement.value = '';
+  }
+
+
   
 }
